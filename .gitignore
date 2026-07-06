@@ -1,0 +1,27 @@
+﻿node_modules/
+.next/
+out/
+coverage/
+*.log
+*.tsbuildinfo
+.env*
+!.env.example
+.vercel/
+.DS_Store
+Thumbs.db
+
+# Local scratch / generated asset workspaces
+tmp/
+assets-source/archive/
+assets-source/generated-sheets/
+
+# Python caches from asset tooling
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Local screenshots and clipboard drops
+codex-clipboard-*.png
+*clipboard-*.png
+*.tmp
+*.bak
