@@ -1,0 +1,10 @@
+﻿.next
+node_modules
+public/assets
+public/index.html
+assets-source
+tmp
+project documents
+package-lock.json
+*.md
+docs
