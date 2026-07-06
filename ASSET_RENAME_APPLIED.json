@@ -1,0 +1,1262 @@
+[
+  {
+    "old": "/assets/decorations/community/community-decoration-01.webp",
+    "new": "/assets/decorations/community/community-accent-01.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-02.webp",
+    "new": "/assets/decorations/community/community-accent-02.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-03.webp",
+    "new": "/assets/decorations/community/community-accent-03.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-04.webp",
+    "new": "/assets/decorations/community/community-accent-04.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-05.webp",
+    "new": "/assets/decorations/community/community-accent-05.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-06.webp",
+    "new": "/assets/decorations/community/community-accent-06.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-07.webp",
+    "new": "/assets/decorations/community/community-accent-07.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-08.webp",
+    "new": "/assets/decorations/community/community-accent-08.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-09.webp",
+    "new": "/assets/decorations/community/community-accent-09.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-10.webp",
+    "new": "/assets/decorations/community/community-accent-10.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-11.webp",
+    "new": "/assets/decorations/community/community-accent-11.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-12.webp",
+    "new": "/assets/decorations/community/community-accent-12.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-13.webp",
+    "new": "/assets/decorations/community/community-accent-13.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-14.webp",
+    "new": "/assets/decorations/community/community-accent-14.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-15.webp",
+    "new": "/assets/decorations/community/community-accent-15.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-16.webp",
+    "new": "/assets/decorations/community/community-accent-16.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-17.webp",
+    "new": "/assets/decorations/community/community-accent-17.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-18.webp",
+    "new": "/assets/decorations/community/community-accent-18.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-19.webp",
+    "new": "/assets/decorations/community/community-accent-19.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-20.webp",
+    "new": "/assets/decorations/community/community-accent-20.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-22.webp",
+    "new": "/assets/decorations/community/community-accent-22.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-23.webp",
+    "new": "/assets/decorations/community/community-accent-23.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-24.webp",
+    "new": "/assets/decorations/community/community-accent-24.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-25.webp",
+    "new": "/assets/decorations/community/community-accent-25.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-26.webp",
+    "new": "/assets/decorations/community/community-accent-26.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-27.webp",
+    "new": "/assets/decorations/community/community-accent-27.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-28.webp",
+    "new": "/assets/decorations/community/community-accent-28.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-29.webp",
+    "new": "/assets/decorations/community/community-accent-29.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-30.webp",
+    "new": "/assets/decorations/community/community-accent-30.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-31.webp",
+    "new": "/assets/decorations/community/community-accent-31.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-32.webp",
+    "new": "/assets/decorations/community/community-accent-32.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-33.webp",
+    "new": "/assets/decorations/community/community-accent-33.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-34.webp",
+    "new": "/assets/decorations/community/community-accent-34.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-35.webp",
+    "new": "/assets/decorations/community/community-accent-35.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-36.webp",
+    "new": "/assets/decorations/community/community-accent-36.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-37.webp",
+    "new": "/assets/decorations/community/community-accent-37.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-38.webp",
+    "new": "/assets/decorations/community/community-accent-38.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-39.webp",
+    "new": "/assets/decorations/community/community-accent-39.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-40.webp",
+    "new": "/assets/decorations/community/community-accent-40.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-41.webp",
+    "new": "/assets/decorations/community/community-accent-41.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-42.webp",
+    "new": "/assets/decorations/community/community-accent-42.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-43.webp",
+    "new": "/assets/decorations/community/community-accent-43.webp"
+  },
+  {
+    "old": "/assets/decorations/community/community-decoration-44.webp",
+    "new": "/assets/decorations/community/community-accent-44.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-01.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-01.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-02.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-02.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-03.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-03.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-04.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-04.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-05.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-05.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-06.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-06.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-07.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-07.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-08.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-08.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-10.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-10.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-11.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-11.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-12.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-12.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-13.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-13.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-14.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-14.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-15.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-15.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-16.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-16.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-17.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-17.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-19.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-19.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-20.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-20.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-21.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-21.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-22.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-22.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-23.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-23.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-24.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-24.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-25.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-25.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-26.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-26.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-27.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-27.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-28.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-28.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-29.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-29.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-30.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-30.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-31.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-31.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-32.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-32.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-33.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-33.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-34.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-34.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-36.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-36.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-37.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-37.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-38.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-38.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-39.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-39.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-40.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-40.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-41.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-41.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-42.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-42.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-43.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-43.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-44.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-44.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-45.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-45.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-46.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-46.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-48.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-48.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-49.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-49.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-50.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-50.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-51.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-51.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-52.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-52.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-54.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-54.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-55.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-55.webp"
+  },
+  {
+    "old": "/assets/decorations/current-cycle/current-cycle-decoration-56.webp",
+    "new": "/assets/decorations/current-cycle/current-cycle-accent-56.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-01.webp",
+    "new": "/assets/decorations/home/home-accent-01.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-02.webp",
+    "new": "/assets/decorations/home/home-accent-02.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-03.webp",
+    "new": "/assets/decorations/home/home-accent-03.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-04.webp",
+    "new": "/assets/decorations/home/home-accent-04.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-05.webp",
+    "new": "/assets/decorations/home/home-accent-05.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-06.webp",
+    "new": "/assets/decorations/home/home-accent-06.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-07.webp",
+    "new": "/assets/decorations/home/home-accent-07.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-08.webp",
+    "new": "/assets/decorations/home/home-accent-08.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-09.webp",
+    "new": "/assets/decorations/home/home-accent-09.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-10.webp",
+    "new": "/assets/decorations/home/home-accent-10.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-11.webp",
+    "new": "/assets/decorations/home/home-accent-11.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-12.webp",
+    "new": "/assets/decorations/home/home-accent-12.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-13.webp",
+    "new": "/assets/decorations/home/home-accent-13.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-14.webp",
+    "new": "/assets/decorations/home/home-accent-14.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-15.webp",
+    "new": "/assets/decorations/home/home-accent-15.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-16.webp",
+    "new": "/assets/decorations/home/home-accent-16.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-17.webp",
+    "new": "/assets/decorations/home/home-accent-17.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-18.webp",
+    "new": "/assets/decorations/home/home-accent-18.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-20.webp",
+    "new": "/assets/decorations/home/home-accent-20.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-21.webp",
+    "new": "/assets/decorations/home/home-accent-21.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-22.webp",
+    "new": "/assets/decorations/home/home-accent-22.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-23.webp",
+    "new": "/assets/decorations/home/home-accent-23.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-24.webp",
+    "new": "/assets/decorations/home/home-accent-24.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-26.webp",
+    "new": "/assets/decorations/home/home-accent-26.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-27.webp",
+    "new": "/assets/decorations/home/home-accent-27.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-28.webp",
+    "new": "/assets/decorations/home/home-accent-28.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-29.webp",
+    "new": "/assets/decorations/home/home-accent-29.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-30.webp",
+    "new": "/assets/decorations/home/home-accent-30.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-31.webp",
+    "new": "/assets/decorations/home/home-accent-31.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-32.webp",
+    "new": "/assets/decorations/home/home-accent-32.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-33.webp",
+    "new": "/assets/decorations/home/home-accent-33.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-34.webp",
+    "new": "/assets/decorations/home/home-accent-34.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-35.webp",
+    "new": "/assets/decorations/home/home-accent-35.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-36.webp",
+    "new": "/assets/decorations/home/home-accent-36.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-37.webp",
+    "new": "/assets/decorations/home/home-accent-37.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-38.webp",
+    "new": "/assets/decorations/home/home-accent-38.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-39.webp",
+    "new": "/assets/decorations/home/home-accent-39.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-40.webp",
+    "new": "/assets/decorations/home/home-accent-40.webp"
+  },
+  {
+    "old": "/assets/decorations/home/home-decoration-41.webp",
+    "new": "/assets/decorations/home/home-accent-41.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-01.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-01.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-02.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-02.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-03.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-03.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-04.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-04.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-05.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-05.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-06.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-06.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-07.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-07.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-08.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-08.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-09.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-09.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-10.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-10.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-13.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-13.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-14.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-14.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-15.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-15.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-17.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-17.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-18.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-18.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-19.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-19.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-20.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-20.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-21.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-21.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-22.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-22.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-23.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-23.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-24.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-24.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-25.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-25.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-27.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-27.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-28.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-28.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-29.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-29.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-30.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-30.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-32.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-32.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-33.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-33.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-34.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-34.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-35.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-35.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-36.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-36.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-37.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-37.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-38.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-38.webp"
+  },
+  {
+    "old": "/assets/decorations/voices/voices-decoration-39.webp",
+    "new": "/assets/decorations/voices/voices-editorial-accent-39.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-01.webp",
+    "new": "/assets/gamification/badges/badge-reading-01.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-03.webp",
+    "new": "/assets/gamification/badges/badge-reading-03.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-04.webp",
+    "new": "/assets/gamification/badges/badge-reading-04.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-05.webp",
+    "new": "/assets/gamification/badges/badge-reading-05.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-06.webp",
+    "new": "/assets/gamification/badges/badge-reading-06.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-10.webp",
+    "new": "/assets/gamification/badges/badge-reading-10.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-11.webp",
+    "new": "/assets/gamification/badges/badge-reading-11.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-12.webp",
+    "new": "/assets/gamification/badges/badge-reading-12.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-14.webp",
+    "new": "/assets/gamification/badges/badge-reading-14.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-15.webp",
+    "new": "/assets/gamification/badges/badge-reading-15.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-16.webp",
+    "new": "/assets/gamification/badges/badge-reading-16.webp"
+  },
+  {
+    "old": "/assets/gamification/badge-reading-17.webp",
+    "new": "/assets/gamification/badges/badge-reading-17.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-01.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-01.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-02.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-02.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-03.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-03.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-04.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-04.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-05.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-05.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-06.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-06.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-07.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-07.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-08.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-08.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-09.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-09.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-10.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-10.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-11.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-11.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-12.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-12.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-13.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-13.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-14.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-14.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-15.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-15.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-16.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-16.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-17.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-17.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-18.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-18.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-19.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-19.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-20.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-20.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-21.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-21.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-22.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-22.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-23.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-23.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-24.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-24.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-25.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-25.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-26.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-26.webp"
+  },
+  {
+    "old": "/assets/gamification/reward-sticker-27.webp",
+    "new": "/assets/gamification/rewards/reward-sticker-27.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-01.webp",
+    "new": "/assets/gamification/progress/streak-progress-01.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-02.webp",
+    "new": "/assets/gamification/progress/streak-progress-02.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-03.webp",
+    "new": "/assets/gamification/progress/streak-progress-03.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-04.webp",
+    "new": "/assets/gamification/progress/streak-progress-04.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-05.webp",
+    "new": "/assets/gamification/progress/streak-progress-05.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-06.webp",
+    "new": "/assets/gamification/progress/streak-progress-06.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-07.webp",
+    "new": "/assets/gamification/progress/streak-progress-07.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-08.webp",
+    "new": "/assets/gamification/progress/streak-progress-08.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-09.webp",
+    "new": "/assets/gamification/progress/streak-progress-09.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-10.webp",
+    "new": "/assets/gamification/progress/streak-progress-10.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-13.webp",
+    "new": "/assets/gamification/progress/streak-progress-13.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-14.webp",
+    "new": "/assets/gamification/progress/streak-progress-14.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-15.webp",
+    "new": "/assets/gamification/progress/streak-progress-15.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-17.webp",
+    "new": "/assets/gamification/progress/streak-progress-17.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-18.webp",
+    "new": "/assets/gamification/progress/streak-progress-18.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-19.webp",
+    "new": "/assets/gamification/progress/streak-progress-19.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-21.webp",
+    "new": "/assets/gamification/progress/streak-progress-21.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-23.webp",
+    "new": "/assets/gamification/progress/streak-progress-23.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-24.webp",
+    "new": "/assets/gamification/progress/streak-progress-24.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-25.webp",
+    "new": "/assets/gamification/progress/streak-progress-25.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-26.webp",
+    "new": "/assets/gamification/progress/streak-progress-26.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-27.webp",
+    "new": "/assets/gamification/progress/streak-progress-27.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-28.webp",
+    "new": "/assets/gamification/progress/streak-progress-28.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-29.webp",
+    "new": "/assets/gamification/progress/streak-progress-29.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-30.webp",
+    "new": "/assets/gamification/progress/streak-progress-30.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-31.webp",
+    "new": "/assets/gamification/progress/streak-progress-31.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-32.webp",
+    "new": "/assets/gamification/progress/streak-progress-32.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-33.webp",
+    "new": "/assets/gamification/progress/streak-progress-33.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-34.webp",
+    "new": "/assets/gamification/progress/streak-progress-34.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-35.webp",
+    "new": "/assets/gamification/progress/streak-progress-35.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-36.webp",
+    "new": "/assets/gamification/progress/streak-progress-36.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-37.webp",
+    "new": "/assets/gamification/progress/streak-progress-37.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-38.webp",
+    "new": "/assets/gamification/progress/streak-progress-38.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-39.webp",
+    "new": "/assets/gamification/progress/streak-progress-39.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-40.webp",
+    "new": "/assets/gamification/progress/streak-progress-40.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-41.webp",
+    "new": "/assets/gamification/progress/streak-progress-41.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-42.webp",
+    "new": "/assets/gamification/progress/streak-progress-42.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-43.webp",
+    "new": "/assets/gamification/progress/streak-progress-43.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-44.webp",
+    "new": "/assets/gamification/progress/streak-progress-44.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-45.webp",
+    "new": "/assets/gamification/progress/streak-progress-45.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-46.webp",
+    "new": "/assets/gamification/progress/streak-progress-46.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-47.webp",
+    "new": "/assets/gamification/progress/streak-progress-47.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-48.webp",
+    "new": "/assets/gamification/progress/streak-progress-48.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-49.webp",
+    "new": "/assets/gamification/progress/streak-progress-49.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-50.webp",
+    "new": "/assets/gamification/progress/streak-progress-50.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-51.webp",
+    "new": "/assets/gamification/progress/streak-progress-51.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-52.webp",
+    "new": "/assets/gamification/progress/streak-progress-52.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-53.webp",
+    "new": "/assets/gamification/progress/streak-progress-53.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-54.webp",
+    "new": "/assets/gamification/progress/streak-progress-54.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-55.webp",
+    "new": "/assets/gamification/progress/streak-progress-55.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-56.webp",
+    "new": "/assets/gamification/progress/streak-progress-56.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-57.webp",
+    "new": "/assets/gamification/progress/streak-progress-57.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-58.webp",
+    "new": "/assets/gamification/progress/streak-progress-58.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-59.webp",
+    "new": "/assets/gamification/progress/streak-progress-59.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-60.webp",
+    "new": "/assets/gamification/progress/streak-progress-60.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-61.webp",
+    "new": "/assets/gamification/progress/streak-progress-61.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-62.webp",
+    "new": "/assets/gamification/progress/streak-progress-62.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-63.webp",
+    "new": "/assets/gamification/progress/streak-progress-63.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-64.webp",
+    "new": "/assets/gamification/progress/streak-progress-64.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-65.webp",
+    "new": "/assets/gamification/progress/streak-progress-65.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-66.webp",
+    "new": "/assets/gamification/progress/streak-progress-66.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-67.webp",
+    "new": "/assets/gamification/progress/streak-progress-67.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-68.webp",
+    "new": "/assets/gamification/progress/streak-progress-68.webp"
+  },
+  {
+    "old": "/assets/gamification/streak-progress-69.webp",
+    "new": "/assets/gamification/progress/streak-progress-69.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-01.webp",
+    "new": "/assets/textures/editorial-texture-01.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-02.webp",
+    "new": "/assets/textures/editorial-texture-02.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-03.webp",
+    "new": "/assets/textures/editorial-texture-03.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-04.webp",
+    "new": "/assets/textures/editorial-texture-04.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-05.webp",
+    "new": "/assets/textures/editorial-texture-05.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-06.webp",
+    "new": "/assets/textures/editorial-texture-06.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-07.webp",
+    "new": "/assets/textures/editorial-texture-07.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-08.webp",
+    "new": "/assets/textures/editorial-texture-08.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-10.webp",
+    "new": "/assets/textures/editorial-texture-10.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-11.webp",
+    "new": "/assets/textures/editorial-texture-11.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-12.webp",
+    "new": "/assets/textures/editorial-texture-12.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-14.webp",
+    "new": "/assets/textures/editorial-texture-14.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-15.webp",
+    "new": "/assets/textures/editorial-texture-15.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-16.webp",
+    "new": "/assets/textures/editorial-texture-16.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-17.webp",
+    "new": "/assets/textures/editorial-texture-17.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-18.webp",
+    "new": "/assets/textures/editorial-texture-18.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-19.webp",
+    "new": "/assets/textures/editorial-texture-19.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-20.webp",
+    "new": "/assets/textures/editorial-texture-20.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-22.webp",
+    "new": "/assets/textures/editorial-texture-22.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-23.webp",
+    "new": "/assets/textures/editorial-texture-23.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-25.webp",
+    "new": "/assets/textures/editorial-texture-25.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-26.webp",
+    "new": "/assets/textures/editorial-texture-26.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-27.webp",
+    "new": "/assets/textures/editorial-texture-27.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-29.webp",
+    "new": "/assets/textures/editorial-texture-29.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-33.webp",
+    "new": "/assets/textures/editorial-texture-33.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-34.webp",
+    "new": "/assets/textures/editorial-texture-34.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-35.webp",
+    "new": "/assets/textures/editorial-texture-35.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-36.webp",
+    "new": "/assets/textures/editorial-texture-36.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-37.webp",
+    "new": "/assets/textures/editorial-texture-37.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-38.webp",
+    "new": "/assets/textures/editorial-texture-38.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-39.webp",
+    "new": "/assets/textures/editorial-texture-39.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-41.webp",
+    "new": "/assets/textures/editorial-texture-41.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-42.webp",
+    "new": "/assets/textures/editorial-texture-42.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-43.webp",
+    "new": "/assets/textures/editorial-texture-43.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-44.webp",
+    "new": "/assets/textures/editorial-texture-44.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-45.webp",
+    "new": "/assets/textures/editorial-texture-45.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-46.webp",
+    "new": "/assets/textures/editorial-texture-46.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-47.webp",
+    "new": "/assets/textures/editorial-texture-47.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-48.webp",
+    "new": "/assets/textures/editorial-texture-48.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-49.webp",
+    "new": "/assets/textures/editorial-texture-49.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-50.webp",
+    "new": "/assets/textures/editorial-texture-50.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-51.webp",
+    "new": "/assets/textures/editorial-texture-51.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-52.webp",
+    "new": "/assets/textures/editorial-texture-52.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-53.webp",
+    "new": "/assets/textures/editorial-texture-53.webp"
+  },
+  {
+    "old": "/assets/textures/blog-editorial-54.webp",
+    "new": "/assets/textures/editorial-texture-54.webp"
+  }
+]

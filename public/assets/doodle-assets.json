@@ -1,0 +1,1582 @@
+[
+  {
+    "name": "arrow-curve-orange-01",
+    "path": "public/assets/doodles/arrow-curve-orange-01.png",
+    "width": 235,
+    "height": 116,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 1
+  },
+  {
+    "name": "arrow-loop-black-01",
+    "path": "public/assets/doodles/arrow-loop-black-01.png",
+    "width": 253,
+    "height": 80,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 2
+  },
+  {
+    "name": "arrow-dashed-loop-orange-01",
+    "path": "public/assets/doodles/arrow-dashed-loop-orange-01.png",
+    "width": 236,
+    "height": 72,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 3
+  },
+  {
+    "name": "arrow-curve-black-01",
+    "path": "public/assets/doodles/arrow-curve-black-01.png",
+    "width": 192,
+    "height": 96,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 4
+  },
+  {
+    "name": "arrow-dashed-black-01",
+    "path": "public/assets/doodles/arrow-dashed-black-01.png",
+    "width": 290,
+    "height": 167,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 5
+  },
+  {
+    "name": "arrow-triple-loop-orange-01",
+    "path": "public/assets/doodles/arrow-triple-loop-orange-01.png",
+    "width": 289,
+    "height": 164,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 6
+  },
+  {
+    "name": "arrow-wavy-black-01",
+    "path": "public/assets/doodles/arrow-wavy-black-01.png",
+    "width": 289,
+    "height": 166,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 7
+  },
+  {
+    "name": "arrow-loop-orange-01",
+    "path": "public/assets/doodles/arrow-loop-orange-01.png",
+    "width": 290,
+    "height": 162,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 8
+  },
+  {
+    "name": "arrow-zigzag-orange-01",
+    "path": "public/assets/doodles/arrow-zigzag-orange-01.png",
+    "width": 290,
+    "height": 124,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 9
+  },
+  {
+    "name": "arrow-curve-black-02",
+    "path": "public/assets/doodles/arrow-curve-black-02.png",
+    "width": 289,
+    "height": 151,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 10
+  },
+  {
+    "name": "reading-path-dotted-orange-01",
+    "path": "public/assets/doodles/reading-path-dotted-orange-01.png",
+    "width": 289,
+    "height": 137,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 11
+  },
+  {
+    "name": "arrow-triple-loop-black-01",
+    "path": "public/assets/doodles/arrow-triple-loop-black-01.png",
+    "width": 290,
+    "height": 143,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 12
+  },
+  {
+    "name": "arrow-loop-circle-black-01",
+    "path": "public/assets/doodles/arrow-loop-circle-black-01.png",
+    "width": 290,
+    "height": 166,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 13
+  },
+  {
+    "name": "reading-path-dashed-orange-01",
+    "path": "public/assets/doodles/reading-path-dashed-orange-01.png",
+    "width": 289,
+    "height": 140,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 14
+  },
+  {
+    "name": "arrow-loop-black-02",
+    "path": "public/assets/doodles/arrow-loop-black-02.png",
+    "width": 289,
+    "height": 162,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 15
+  },
+  {
+    "name": "arrow-curve-orange-02",
+    "path": "public/assets/doodles/arrow-curve-orange-02.png",
+    "width": 290,
+    "height": 162,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 16
+  },
+  {
+    "name": "reading-path-dashed-orange-02",
+    "path": "public/assets/doodles/reading-path-dashed-orange-02.png",
+    "width": 290,
+    "height": 175,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 17
+  },
+  {
+    "name": "arrow-double-loop-black-01",
+    "path": "public/assets/doodles/arrow-double-loop-black-01.png",
+    "width": 289,
+    "height": 134,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 18
+  },
+  {
+    "name": "arrow-curve-orange-03",
+    "path": "public/assets/doodles/arrow-curve-orange-03.png",
+    "width": 289,
+    "height": 145,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 19
+  },
+  {
+    "name": "arrow-stair-black-01",
+    "path": "public/assets/doodles/arrow-stair-black-01.png",
+    "width": 290,
+    "height": 160,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 20
+  },
+  {
+    "name": "reading-path-loop-black-01",
+    "path": "public/assets/doodles/reading-path-loop-black-01.png",
+    "width": 185,
+    "height": 127,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 21
+  },
+  {
+    "name": "arrow-loop-orange-02",
+    "path": "public/assets/doodles/arrow-loop-orange-02.png",
+    "width": 219,
+    "height": 105,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 22
+  },
+  {
+    "name": "reading-path-loop-black-02",
+    "path": "public/assets/doodles/reading-path-loop-black-02.png",
+    "width": 242,
+    "height": 75,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 23
+  },
+  {
+    "name": "arrow-wavy-orange-01",
+    "path": "public/assets/doodles/arrow-wavy-orange-01.png",
+    "width": 266,
+    "height": 48,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-01.png",
+    "source_cell": 24
+  },
+  {
+    "name": "underline-orange-01",
+    "path": "public/assets/doodles/underline-orange-01.png",
+    "width": 173,
+    "height": 54,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 1
+  },
+  {
+    "name": "underline-double-black-01",
+    "path": "public/assets/doodles/underline-double-black-01.png",
+    "width": 168,
+    "height": 69,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 2
+  },
+  {
+    "name": "underline-scribble-orange-01",
+    "path": "public/assets/doodles/underline-scribble-orange-01.png",
+    "width": 171,
+    "height": 68,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 3
+  },
+  {
+    "name": "wavy-underline-black-01",
+    "path": "public/assets/doodles/wavy-underline-black-01.png",
+    "width": 188,
+    "height": 38,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 4
+  },
+  {
+    "name": "wavy-double-orange-01",
+    "path": "public/assets/doodles/wavy-double-orange-01.png",
+    "width": 169,
+    "height": 62,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 5
+  },
+  {
+    "name": "highlight-scribble-black-01",
+    "path": "public/assets/doodles/highlight-scribble-black-01.png",
+    "width": 188,
+    "height": 60,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 6
+  },
+  {
+    "name": "circle-double-orange-01",
+    "path": "public/assets/doodles/circle-double-orange-01.png",
+    "width": 184,
+    "height": 125,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 7
+  },
+  {
+    "name": "circle-scribble-black-01",
+    "path": "public/assets/doodles/circle-scribble-black-01.png",
+    "width": 195,
+    "height": 134,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 8
+  },
+  {
+    "name": "circle-orange-01",
+    "path": "public/assets/doodles/circle-orange-01.png",
+    "width": 176,
+    "height": 108,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 9
+  },
+  {
+    "name": "circle-bold-black-01",
+    "path": "public/assets/doodles/circle-bold-black-01.png",
+    "width": 188,
+    "height": 114,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 10
+  },
+  {
+    "name": "circle-dashed-orange-01",
+    "path": "public/assets/doodles/circle-dashed-orange-01.png",
+    "width": 174,
+    "height": 105,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 11
+  },
+  {
+    "name": "circle-messy-black-01",
+    "path": "public/assets/doodles/circle-messy-black-01.png",
+    "width": 182,
+    "height": 106,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 12
+  },
+  {
+    "name": "highlight-orange-01",
+    "path": "public/assets/doodles/highlight-orange-01.png",
+    "width": 184,
+    "height": 113,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 13
+  },
+  {
+    "name": "highlight-black-01",
+    "path": "public/assets/doodles/highlight-black-01.png",
+    "width": 172,
+    "height": 203,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 14
+  },
+  {
+    "name": "bracket-square-orange-01",
+    "path": "public/assets/doodles/bracket-square-orange-01.png",
+    "width": 138,
+    "height": 131,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 15
+  },
+  {
+    "name": "bracket-curly-black-01",
+    "path": "public/assets/doodles/bracket-curly-black-01.png",
+    "width": 136,
+    "height": 131,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 16
+  },
+  {
+    "name": "bracket-round-orange-01",
+    "path": "public/assets/doodles/bracket-round-orange-01.png",
+    "width": 144,
+    "height": 121,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 17
+  },
+  {
+    "name": "bracket-corner-black-01",
+    "path": "public/assets/doodles/bracket-corner-black-01.png",
+    "width": 163,
+    "height": 130,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 18
+  },
+  {
+    "name": "emphasis-rays-orange-01",
+    "path": "public/assets/doodles/emphasis-rays-orange-01.png",
+    "width": 171,
+    "height": 111,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 19
+  },
+  {
+    "name": "emphasis-rays-black-01",
+    "path": "public/assets/doodles/emphasis-rays-black-01.png",
+    "width": 164,
+    "height": 104,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 20
+  },
+  {
+    "name": "sparkle-rays-orange-01",
+    "path": "public/assets/doodles/sparkle-rays-orange-01.png",
+    "width": 132,
+    "height": 132,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 21
+  },
+  {
+    "name": "exclamation-black-01",
+    "path": "public/assets/doodles/exclamation-black-01.png",
+    "width": 112,
+    "height": 127,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 22
+  },
+  {
+    "name": "emphasis-arrow-orange-01",
+    "path": "public/assets/doodles/emphasis-arrow-orange-01.png",
+    "width": 174,
+    "height": 69,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 23
+  },
+  {
+    "name": "emphasis-arrow-black-01",
+    "path": "public/assets/doodles/emphasis-arrow-black-01.png",
+    "width": 162,
+    "height": 101,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 24
+  },
+  {
+    "name": "swirl-black-01",
+    "path": "public/assets/doodles/swirl-black-01.png",
+    "width": 171,
+    "height": 73,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 25
+  },
+  {
+    "name": "swirl-orange-01",
+    "path": "public/assets/doodles/swirl-orange-01.png",
+    "width": 169,
+    "height": 77,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 26
+  },
+  {
+    "name": "underline-black-02",
+    "path": "public/assets/doodles/underline-black-02.png",
+    "width": 173,
+    "height": 43,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 27
+  },
+  {
+    "name": "underline-arrow-orange-01",
+    "path": "public/assets/doodles/underline-arrow-orange-01.png",
+    "width": 186,
+    "height": 51,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 28
+  },
+  {
+    "name": "underline-textured-black-01",
+    "path": "public/assets/doodles/underline-textured-black-01.png",
+    "width": 176,
+    "height": 42,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 29
+  },
+  {
+    "name": "underline-textured-orange-01",
+    "path": "public/assets/doodles/underline-textured-orange-01.png",
+    "width": 177,
+    "height": 42,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 30
+  },
+  {
+    "name": "checkmark-orange-01",
+    "path": "public/assets/doodles/checkmark-orange-01.png",
+    "width": 129,
+    "height": 109,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 31
+  },
+  {
+    "name": "cross-black-01",
+    "path": "public/assets/doodles/cross-black-01.png",
+    "width": 106,
+    "height": 121,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 32
+  },
+  {
+    "name": "circle-fill-orange-01",
+    "path": "public/assets/doodles/circle-fill-orange-01.png",
+    "width": 108,
+    "height": 115,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 33
+  },
+  {
+    "name": "scribble-ball-black-01",
+    "path": "public/assets/doodles/scribble-ball-black-01.png",
+    "width": 153,
+    "height": 128,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 34
+  },
+  {
+    "name": "spiral-orange-01",
+    "path": "public/assets/doodles/spiral-orange-01.png",
+    "width": 147,
+    "height": 132,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 35
+  },
+  {
+    "name": "zigzag-black-01",
+    "path": "public/assets/doodles/zigzag-black-01.png",
+    "width": 84,
+    "height": 121,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-02.png",
+    "source_cell": 36
+  },
+  {
+    "name": "star-orange-01",
+    "path": "public/assets/doodles/star-orange-01.png",
+    "width": 153,
+    "height": 147,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 1
+  },
+  {
+    "name": "sparkle-black-01",
+    "path": "public/assets/doodles/sparkle-black-01.png",
+    "width": 127,
+    "height": 150,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 2
+  },
+  {
+    "name": "spark-orange-01",
+    "path": "public/assets/doodles/spark-orange-01.png",
+    "width": 145,
+    "height": 156,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 3
+  },
+  {
+    "name": "star-black-01",
+    "path": "public/assets/doodles/star-black-01.png",
+    "width": 144,
+    "height": 130,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 4
+  },
+  {
+    "name": "sparkle-orange-01",
+    "path": "public/assets/doodles/sparkle-orange-01.png",
+    "width": 115,
+    "height": 146,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 5
+  },
+  {
+    "name": "celebration-black-01",
+    "path": "public/assets/doodles/celebration-black-01.png",
+    "width": 134,
+    "height": 115,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 6
+  },
+  {
+    "name": "spark-black-01",
+    "path": "public/assets/doodles/spark-black-01.png",
+    "width": 114,
+    "height": 122,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 7
+  },
+  {
+    "name": "sun-smiley-orange-01",
+    "path": "public/assets/doodles/sun-smiley-orange-01.png",
+    "width": 155,
+    "height": 153,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 8
+  },
+  {
+    "name": "sparkle-black-02",
+    "path": "public/assets/doodles/sparkle-black-02.png",
+    "width": 116,
+    "height": 124,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 9
+  },
+  {
+    "name": "heart-orange-01",
+    "path": "public/assets/doodles/heart-orange-01.png",
+    "width": 148,
+    "height": 139,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 10
+  },
+  {
+    "name": "spark-black-02",
+    "path": "public/assets/doodles/spark-black-02.png",
+    "width": 122,
+    "height": 121,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 11
+  },
+  {
+    "name": "celebration-orange-01",
+    "path": "public/assets/doodles/celebration-orange-01.png",
+    "width": 127,
+    "height": 115,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 12
+  },
+  {
+    "name": "smiley-orange-01",
+    "path": "public/assets/doodles/smiley-orange-01.png",
+    "width": 127,
+    "height": 130,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 13
+  },
+  {
+    "name": "heart-black-01",
+    "path": "public/assets/doodles/heart-black-01.png",
+    "width": 146,
+    "height": 125,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 14
+  },
+  {
+    "name": "spark-orange-02",
+    "path": "public/assets/doodles/spark-orange-02.png",
+    "width": 120,
+    "height": 135,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 15
+  },
+  {
+    "name": "celebration-black-02",
+    "path": "public/assets/doodles/celebration-black-02.png",
+    "width": 117,
+    "height": 144,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 16
+  },
+  {
+    "name": "heart-badge-orange-01",
+    "path": "public/assets/doodles/heart-badge-orange-01.png",
+    "width": 125,
+    "height": 129,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 17
+  },
+  {
+    "name": "sparkle-black-03",
+    "path": "public/assets/doodles/sparkle-black-03.png",
+    "width": 128,
+    "height": 123,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 18
+  },
+  {
+    "name": "celebration-orange-02",
+    "path": "public/assets/doodles/celebration-orange-02.png",
+    "width": 138,
+    "height": 120,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 19
+  },
+  {
+    "name": "sparkle-black-04",
+    "path": "public/assets/doodles/sparkle-black-04.png",
+    "width": 112,
+    "height": 132,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 20
+  },
+  {
+    "name": "flame-orange-01",
+    "path": "public/assets/doodles/flame-orange-01.png",
+    "width": 120,
+    "height": 140,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 21
+  },
+  {
+    "name": "smiley-black-01",
+    "path": "public/assets/doodles/smiley-black-01.png",
+    "width": 133,
+    "height": 132,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 22
+  },
+  {
+    "name": "shooting-star-orange-01",
+    "path": "public/assets/doodles/shooting-star-orange-01.png",
+    "width": 142,
+    "height": 128,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 23
+  },
+  {
+    "name": "celebration-black-03",
+    "path": "public/assets/doodles/celebration-black-03.png",
+    "width": 133,
+    "height": 136,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 24
+  },
+  {
+    "name": "corner-swirl-black-01",
+    "path": "public/assets/doodles/corner-swirl-black-01.png",
+    "width": 129,
+    "height": 109,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 25
+  },
+  {
+    "name": "sparkle-orange-02",
+    "path": "public/assets/doodles/sparkle-orange-02.png",
+    "width": 123,
+    "height": 138,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 26
+  },
+  {
+    "name": "celebration-black-04",
+    "path": "public/assets/doodles/celebration-black-04.png",
+    "width": 138,
+    "height": 144,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 27
+  },
+  {
+    "name": "sun-orange-01",
+    "path": "public/assets/doodles/sun-orange-01.png",
+    "width": 142,
+    "height": 153,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 28
+  },
+  {
+    "name": "heart-black-02",
+    "path": "public/assets/doodles/heart-black-02.png",
+    "width": 100,
+    "height": 139,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 29
+  },
+  {
+    "name": "sparkle-orange-03",
+    "path": "public/assets/doodles/sparkle-orange-03.png",
+    "width": 119,
+    "height": 128,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-03.png",
+    "source_cell": 30
+  },
+  {
+    "name": "open-book-01",
+    "path": "public/assets/icons/open-book-01.png",
+    "width": 196,
+    "height": 164,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 1
+  },
+  {
+    "name": "closed-book-01",
+    "path": "public/assets/icons/closed-book-01.png",
+    "width": 216,
+    "height": 198,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 2
+  },
+  {
+    "name": "book-stack-01",
+    "path": "public/assets/icons/book-stack-01.png",
+    "width": 194,
+    "height": 170,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 3
+  },
+  {
+    "name": "bookmark-01",
+    "path": "public/assets/icons/bookmark-01.png",
+    "width": 85,
+    "height": 170,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 4
+  },
+  {
+    "name": "pen-01",
+    "path": "public/assets/icons/pen-01.png",
+    "width": 144,
+    "height": 189,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 5
+  },
+  {
+    "name": "pencil-01",
+    "path": "public/assets/icons/pencil-01.png",
+    "width": 146,
+    "height": 190,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 6
+  },
+  {
+    "name": "notebook-01",
+    "path": "public/assets/icons/notebook-01.png",
+    "width": 172,
+    "height": 198,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 7
+  },
+  {
+    "name": "speech-bubble-01",
+    "path": "public/assets/icons/speech-bubble-01.png",
+    "width": 167,
+    "height": 146,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 8
+  },
+  {
+    "name": "quote-mark-01",
+    "path": "public/assets/icons/quote-mark-01.png",
+    "width": 138,
+    "height": 121,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 9
+  },
+  {
+    "name": "calendar-01",
+    "path": "public/assets/icons/calendar-01.png",
+    "width": 162,
+    "height": 172,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 10
+  },
+  {
+    "name": "light-bulb-01",
+    "path": "public/assets/icons/light-bulb-01.png",
+    "width": 163,
+    "height": 187,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 11
+  },
+  {
+    "name": "trophy-01",
+    "path": "public/assets/icons/trophy-01.png",
+    "width": 163,
+    "height": 179,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 12
+  },
+  {
+    "name": "flame-01",
+    "path": "public/assets/icons/flame-01.png",
+    "width": 124,
+    "height": 175,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 13
+  },
+  {
+    "name": "certificate-01",
+    "path": "public/assets/icons/certificate-01.png",
+    "width": 154,
+    "height": 196,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 14
+  },
+  {
+    "name": "paper-sheet-01",
+    "path": "public/assets/icons/paper-sheet-01.png",
+    "width": 135,
+    "height": 173,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 15
+  },
+  {
+    "name": "paper-clip-01",
+    "path": "public/assets/icons/paper-clip-01.png",
+    "width": 122,
+    "height": 160,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 16
+  },
+  {
+    "name": "discussion-circle-01",
+    "path": "public/assets/icons/discussion-circle-01.png",
+    "width": 186,
+    "height": 186,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 17
+  },
+  {
+    "name": "reading-group-01",
+    "path": "public/assets/icons/reading-group-01.png",
+    "width": 186,
+    "height": 172,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 18
+  },
+  {
+    "name": "magnifier-01",
+    "path": "public/assets/icons/magnifier-01.png",
+    "width": 154,
+    "height": 172,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 19
+  },
+  {
+    "name": "envelope-01",
+    "path": "public/assets/icons/envelope-01.png",
+    "width": 160,
+    "height": 124,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-04.png",
+    "source_cell": 20
+  },
+  {
+    "name": "sticky-note-cream-taped-01",
+    "path": "public/assets/stickers/sticky-note-cream-taped-01.png",
+    "width": 227,
+    "height": 247,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 1
+  },
+  {
+    "name": "sticky-note-peach-taped-01",
+    "path": "public/assets/stickers/sticky-note-peach-taped-01.png",
+    "width": 231,
+    "height": 240,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 2
+  },
+  {
+    "name": "torn-note-taped-01",
+    "path": "public/assets/stickers/torn-note-taped-01.png",
+    "width": 272,
+    "height": 237,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 3
+  },
+  {
+    "name": "lined-paper-taped-01",
+    "path": "public/assets/stickers/lined-paper-taped-01.png",
+    "width": 260,
+    "height": 215,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 4
+  },
+  {
+    "name": "torn-paper-blank-01",
+    "path": "public/assets/stickers/torn-paper-blank-01.png",
+    "width": 265,
+    "height": 215,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 5
+  },
+  {
+    "name": "note-card-pinned-01",
+    "path": "public/assets/stickers/note-card-pinned-01.png",
+    "width": 232,
+    "height": 188,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 6
+  },
+  {
+    "name": "torn-note-peach-pinned-01",
+    "path": "public/assets/stickers/torn-note-peach-pinned-01.png",
+    "width": 246,
+    "height": 210,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 7
+  },
+  {
+    "name": "sticky-note-paperclip-01",
+    "path": "public/assets/stickers/sticky-note-paperclip-01.png",
+    "width": 225,
+    "height": 225,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 8
+  },
+  {
+    "name": "tape-cream-01",
+    "path": "public/assets/stickers/tape-cream-01.png",
+    "width": 234,
+    "height": 81,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 9
+  },
+  {
+    "name": "tape-orange-01",
+    "path": "public/assets/stickers/tape-orange-01.png",
+    "width": 228,
+    "height": 81,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 10
+  },
+  {
+    "name": "tape-gingham-01",
+    "path": "public/assets/stickers/tape-gingham-01.png",
+    "width": 245,
+    "height": 85,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 11
+  },
+  {
+    "name": "tape-black-01",
+    "path": "public/assets/stickers/tape-black-01.png",
+    "width": 234,
+    "height": 86,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 12
+  },
+  {
+    "name": "sticker-starburst-orange-01",
+    "path": "public/assets/stickers/sticker-starburst-orange-01.png",
+    "width": 219,
+    "height": 176,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 13
+  },
+  {
+    "name": "sticker-badge-cream-01",
+    "path": "public/assets/stickers/sticker-badge-cream-01.png",
+    "width": 179,
+    "height": 180,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 14
+  },
+  {
+    "name": "sticker-circle-orange-01",
+    "path": "public/assets/stickers/sticker-circle-orange-01.png",
+    "width": 193,
+    "height": 195,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 15
+  },
+  {
+    "name": "sticker-badge-peach-01",
+    "path": "public/assets/stickers/sticker-badge-peach-01.png",
+    "width": 196,
+    "height": 192,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 16
+  },
+  {
+    "name": "stamp-orange-border-01",
+    "path": "public/assets/stickers/stamp-orange-border-01.png",
+    "width": 193,
+    "height": 172,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 17
+  },
+  {
+    "name": "stamp-black-border-01",
+    "path": "public/assets/stickers/stamp-black-border-01.png",
+    "width": 187,
+    "height": 172,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 18
+  },
+  {
+    "name": "torn-paper-strip-01",
+    "path": "public/assets/stickers/torn-paper-strip-01.png",
+    "width": 248,
+    "height": 171,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 19
+  },
+  {
+    "name": "torn-grid-paper-01",
+    "path": "public/assets/stickers/torn-grid-paper-01.png",
+    "width": 256,
+    "height": 140,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 20
+  },
+  {
+    "name": "paper-clip-black-01",
+    "path": "public/assets/stickers/paper-clip-black-01.png",
+    "width": 119,
+    "height": 129,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 21
+  },
+  {
+    "name": "paper-clip-orange-01",
+    "path": "public/assets/stickers/paper-clip-orange-01.png",
+    "width": 121,
+    "height": 117,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 22
+  },
+  {
+    "name": "tape-polka-dot-01",
+    "path": "public/assets/stickers/tape-polka-dot-01.png",
+    "width": 223,
+    "height": 86,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 23
+  },
+  {
+    "name": "tape-striped-orange-01",
+    "path": "public/assets/stickers/tape-striped-orange-01.png",
+    "width": 245,
+    "height": 88,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-05.png",
+    "source_cell": 24
+  },
+  {
+    "name": "wavy-divider-01",
+    "path": "public/assets/dividers/wavy-divider-01.png",
+    "width": 235,
+    "height": 46,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 1
+  },
+  {
+    "name": "leaf-dash-divider-01",
+    "path": "public/assets/dividers/leaf-dash-divider-01.png",
+    "width": 234,
+    "height": 51,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 2
+  },
+  {
+    "name": "loop-dash-divider-01",
+    "path": "public/assets/dividers/loop-dash-divider-01.png",
+    "width": 232,
+    "height": 65,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 3
+  },
+  {
+    "name": "handdrawn-divider-01",
+    "path": "public/assets/dividers/handdrawn-divider-01.png",
+    "width": 238,
+    "height": 33,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 4
+  },
+  {
+    "name": "open-book-divider-01",
+    "path": "public/assets/dividers/open-book-divider-01.png",
+    "width": 236,
+    "height": 55,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 5
+  },
+  {
+    "name": "leaf-divider-orange-01",
+    "path": "public/assets/dividers/leaf-divider-orange-01.png",
+    "width": 241,
+    "height": 52,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 6
+  },
+  {
+    "name": "dotted-divider-01",
+    "path": "public/assets/dividers/dotted-divider-01.png",
+    "width": 235,
+    "height": 33,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 7
+  },
+  {
+    "name": "floral-line-divider-orange-01",
+    "path": "public/assets/dividers/floral-line-divider-orange-01.png",
+    "width": 241,
+    "height": 40,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 8
+  },
+  {
+    "name": "dashed-wave-divider-01",
+    "path": "public/assets/dividers/dashed-wave-divider-01.png",
+    "width": 238,
+    "height": 42,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 9
+  },
+  {
+    "name": "heart-divider-01",
+    "path": "public/assets/dividers/heart-divider-01.png",
+    "width": 239,
+    "height": 50,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 10
+  },
+  {
+    "name": "looped-double-divider-01",
+    "path": "public/assets/dividers/looped-double-divider-01.png",
+    "width": 239,
+    "height": 54,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 11
+  },
+  {
+    "name": "leaf-divider-black-01",
+    "path": "public/assets/dividers/leaf-divider-black-01.png",
+    "width": 240,
+    "height": 53,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 12
+  },
+  {
+    "name": "cross-stitch-divider-01",
+    "path": "public/assets/dividers/cross-stitch-divider-01.png",
+    "width": 237,
+    "height": 32,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 13
+  },
+  {
+    "name": "botanical-divider-01",
+    "path": "public/assets/dividers/botanical-divider-01.png",
+    "width": 239,
+    "height": 57,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 14
+  },
+  {
+    "name": "notebook-margin-divider-01",
+    "path": "public/assets/dividers/notebook-margin-divider-01.png",
+    "width": 238,
+    "height": 42,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 15
+  },
+  {
+    "name": "open-book-rays-divider-01",
+    "path": "public/assets/dividers/open-book-rays-divider-01.png",
+    "width": 236,
+    "height": 92,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 16
+  },
+  {
+    "name": "loop-dot-divider-01",
+    "path": "public/assets/dividers/loop-dot-divider-01.png",
+    "width": 237,
+    "height": 48,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 17
+  },
+  {
+    "name": "cream-wave-divider-01",
+    "path": "public/assets/dividers/cream-wave-divider-01.png",
+    "width": 239,
+    "height": 36,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 18
+  },
+  {
+    "name": "double-line-divider-01",
+    "path": "public/assets/dividers/double-line-divider-01.png",
+    "width": 237,
+    "height": 43,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 19
+  },
+  {
+    "name": "floral-dash-divider-01",
+    "path": "public/assets/dividers/floral-dash-divider-01.png",
+    "width": 238,
+    "height": 45,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 20
+  },
+  {
+    "name": "leaf-dot-divider-01",
+    "path": "public/assets/dividers/leaf-dot-divider-01.png",
+    "width": 239,
+    "height": 52,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 21
+  },
+  {
+    "name": "orange-loop-divider-01",
+    "path": "public/assets/dividers/orange-loop-divider-01.png",
+    "width": 227,
+    "height": 54,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 22
+  },
+  {
+    "name": "flower-divider-01",
+    "path": "public/assets/dividers/flower-divider-01.png",
+    "width": 239,
+    "height": 51,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 23
+  },
+  {
+    "name": "dashed-wave-divider-02",
+    "path": "public/assets/dividers/dashed-wave-divider-02.png",
+    "width": 236,
+    "height": 42,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "source_sheet": "sheet-06.png",
+    "source_cell": 24
+  }
+]

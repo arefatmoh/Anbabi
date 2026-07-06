@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anbabi Production Asset Library</title>
+  <style>
+    :root { --paper:#fff8eb; --ink:#171814; --orange:#f46618; --cream:#f4ead6; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,system-ui,sans-serif; color:var(--ink); background:var(--paper); }
+    header { position:sticky; top:0; z-index:5; padding:18px 4vw; background:rgba(255,248,235,.95); border-bottom:1px solid #e6dcc9; backdrop-filter:blur(12px); }
+    h1 { margin:0 0 12px; font:800 clamp(24px,4vw,42px)/1.05 Georgia,serif; }
+    .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    button,input { border:1px solid #cfc5b5; background:white; border-radius:999px; padding:9px 14px; font:600 13px inherit; }
+    button.active { background:var(--ink); color:white; border-color:var(--ink); }
+    input { min-width:230px; }
+    main { padding:28px 4vw 60px; }
+    .summary { color:#6b665e; margin-bottom:22px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px; }
+    article { border:1px solid #dfd5c4; background:white; border-radius:18px; overflow:hidden; min-width:0; }
+    .preview { height:150px; display:grid; place-items:center; padding:16px; background:var(--cream); transition:.2s; }
+    .preview img { width:100%; height:100%; object-fit:contain; }
+    .preview.black { background:#171814; }
+    .preview.orange { background:#f46618; }
+    .preview.checker { background-color:#fff; background-image:linear-gradient(45deg,#e8e8e8 25%,transparent 25%),linear-gradient(-45deg,#e8e8e8 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e8e8e8 75%),linear-gradient(-45deg,transparent 75%,#e8e8e8 75%); background-size:18px 18px; background-position:0 0,0 9px,9px -9px,-9px 0; }
+    .meta { padding:11px 12px 13px; }
+    .name { font-weight:800; font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .detail { color:#777168; font-size:10px; margin-top:5px; }
+    @media (max-width:600px) { .grid{grid-template-columns:repeat(2,minmax(0,1fr));}.preview{height:120px} input{width:100%} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anbabi production assets</h1>
+    <div class="controls" id="categories"></div>
+    <div class="controls" style="margin-top:8px">
+      <input id="search" type="search" placeholder="Search assets…" />
+      <button data-bg="cream" class="active">Cream</button>
+      <button data-bg="black">Black</button>
+      <button data-bg="orange">Orange</button>
+      <button data-bg="checker">Checker</button>
+    </div>
+  </header>
+  <main>
+    <div class="summary" id="summary">Loading asset manifest…</div>
+    <section class="grid" id="grid"></section>
+  </main>
+  <script>
+    let assets=[], category="all", background="cream";
+    const grid=document.querySelector("#grid"), summary=document.querySelector("#summary");
+    const render=()=>{
+      const query=document.querySelector("#search").value.trim().toLowerCase();
+      const filtered=assets.filter(a=>(category==="all"||a.category===category)&&(!query||`${a.name} ${a.category} ${a.subcategory||""}`.toLowerCase().includes(query)));
+      grid.innerHTML=filtered.map(a=>`<article><div class="preview ${background}"><img loading="lazy" src="${a.path}" alt="${a.name}"></div><div class="meta"><div class="name" title="${a.name}">${a.name}</div><div class="detail">${a.category}${a.subcategory?` / ${a.subcategory}`:""} · ${a.width}×${a.height} · ${a.format}</div></div></article>`).join("");
+      summary.textContent=`Showing ${filtered.length} of ${assets.length} curated production files.`;
+    };
+    fetch("/assets/manifest.json").then(r=>r.json()).then(data=>{
+      const preferred=new Map();
+      data.forEach(a=>{const key=`${a.category}/${a.subcategory||""}/${a.name}`;if(!preferred.has(key)||a.format==="webp")preferred.set(key,a)});
+      assets=[...preferred.values()];
+      const cats=["all",...new Set(assets.map(a=>a.category))];
+      document.querySelector("#categories").innerHTML=cats.map((c,i)=>`<button data-category="${c}" class="${i===0?"active":""}">${c}</button>`).join("");
+      document.querySelectorAll("[data-category]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-category]").forEach(x=>x.classList.remove("active"));b.classList.add("active");category=b.dataset.category;render()});
+      render();
+    });
+    document.querySelector("#search").addEventListener("input",render);
+    document.querySelectorAll("[data-bg]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-bg]").forEach(x=>x.classList.remove("active"));b.classList.add("active");background=b.dataset.bg;render()});
+  </script>
+</body>
+</html>

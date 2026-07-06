@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read & Revive — Asset Test</title>
+    <style>
+      :root {
+        --orange: #f46618;
+        --ink: #171814;
+        --paper: #fff8eb;
+        --cream: #f4ead6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, system-ui, sans-serif;
+      }
+      .page {
+        width: min(1120px, 92vw);
+        margin: auto;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+      }
+      .brand {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 900;
+        font-size: 20px;
+      }
+      .brand img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+      }
+      nav {
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .hero {
+        min-height: 520px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 50px;
+      }
+      .eyebrow {
+        color: var(--orange);
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: clamp(50px, 7vw, 86px);
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+        margin: 18px 0 24px;
+      }
+      h1 span {
+        color: var(--orange);
+        position: relative;
+      }
+      h1 span img {
+        position: absolute;
+        left: 0;
+        bottom: -24px;
+        width: 100%;
+        height: 24px;
+      }
+      .lead {
+        max-width: 570px;
+        font-size: 18px;
+        line-height: 1.7;
+        color: #5e5b54;
+      }
+      button {
+        border: 0;
+        border-radius: 999px;
+        padding: 15px 23px;
+        background: var(--ink);
+        color: white;
+        font-weight: 800;
+        font-size: 15px;
+      }
+      .cta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 30px;
+      }
+      .cta img {
+        width: 105px;
+        height: 50px;
+        object-fit: contain;
+      }
+      .art {
+        position: relative;
+        height: 430px;
+        border-radius: 34px;
+        background: var(--cream);
+        overflow: hidden;
+      }
+      .art .book {
+        position: absolute;
+        width: 48%;
+        left: 25%;
+        top: 20%;
+      }
+      .art .note {
+        position: absolute;
+        width: 39%;
+        right: 5%;
+        bottom: 4%;
+        transform: rotate(5deg);
+      }
+      .art .spark {
+        position: absolute;
+        width: 82px;
+        top: 9%;
+        right: 10%;
+      }
+      .art .loop {
+        position: absolute;
+        width: 110px;
+        bottom: 13%;
+        left: 3%;
+      }
+      .showcase {
+        margin: 35px 0 80px;
+        padding: 42px;
+        background: #171814;
+        color: white;
+        border-radius: 32px;
+      }
+      .showcase-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 26px;
+      }
+      .showcase h2 {
+        margin: 0;
+        font-size: 34px;
+      }
+      .showcase p {
+        color: #aaa99f;
+        margin: 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+      }
+      .tile {
+        min-height: 130px;
+        padding: 16px;
+        display: grid;
+        place-items: center;
+        border-radius: 18px;
+        position: relative;
+        background-color: #fff;
+        background-image:
+          linear-gradient(45deg, #ececec 25%, transparent 25%),
+          linear-gradient(-45deg, #ececec 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #ececec 75%),
+          linear-gradient(-45deg, transparent 75%, #ececec 75%);
+        background-size: 18px 18px;
+        background-position:
+          0 0,
+          0 9px,
+          9px -9px,
+          -9px 0;
+      }
+      .tile img {
+        width: 100%;
+        height: 90px;
+        object-fit: contain;
+      }
+      .tile b {
+        position: absolute;
+        bottom: 7px;
+        color: #555;
+        font-size: 9px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      @media (max-width: 760px) {
+        nav {
+          display: none;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 45px 0;
+        }
+        .art {
+          height: 360px;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .showcase {
+          padding: 24px;
+        }
+        .showcase-head {
+          display: block;
+        }
+        .showcase p {
+          margin-top: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="brand">
+          <img src="assets/icons/open-book-01.png" alt="" /> READ & REVIVE
+        </div>
+        <nav>
+          <span>Home</span><span>Reading Path</span><span>Community</span
+          ><span>About</span>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <div class="eyebrow">READ • REFLECT • REVIVE</div>
+            <h1>
+              Stories that make you feel
+              <span
+                >alive<img
+                  src="assets/doodles/underline-scribble-orange-01.png"
+                  alt="" /></span
+              >.
+            </h1>
+            <p class="lead">
+              A playful home for curious readers. Discover thoughtful books,
+              share what moved you, and build a reading habit that stays.
+            </p>
+            <div class="cta">
+              <button>Start your reading journey</button
+              ><img src="assets/doodles/emphasis-arrow-orange-01.png" alt="" />
+            </div>
+          </div>
+          <div class="art">
+            <img
+              class="book"
+              src="assets/icons/open-book-01.png"
+              alt="Open book"
+            />
+            <img
+              class="note"
+              src="assets/stickers/sticky-note-peach-taped-01.png"
+              alt="Sticky note"
+            />
+            <img
+              class="spark"
+              src="assets/doodles/sparkle-orange-02.png"
+              alt=""
+            />
+            <img
+              class="loop"
+              src="assets/doodles/arrow-loop-black-01.png"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <section class="showcase">
+          <div class="showcase-head">
+            <h2>Transparency test</h2>
+            <p>The checker pattern below is CSS—not part of the PNG files.</p>
+          </div>
+          <div class="grid">
+            <div class="tile">
+              <img src="assets/doodles/star-orange-01.png" alt="" /><b
+                >Doodle</b
+              >
+            </div>
+            <div class="tile">
+              <img
+                src="assets/doodles/reading-path-loop-black-01.png"
+                alt=""
+              /><b>Path</b>
+            </div>
+            <div class="tile">
+              <img src="assets/icons/trophy-01.png" alt="" /><b>Icon</b>
+            </div>
+            <div class="tile">
+              <img
+                src="assets/stickers/sticker-circle-orange-01.png"
+                alt=""
+              /><b>Sticker</b>
+            </div>
+            <div class="tile">
+              <img src="assets/dividers/botanical-divider-01.png" alt="" /><b
+                >Divider</b
+              >
+            </div>
+            <div class="tile">
+              <img src="assets/icons/reading-group-01.png" alt="" /><b
+                >Reading</b
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
