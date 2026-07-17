@@ -7,6 +7,7 @@ import { ArrowIcon, LinkButton } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { NumberBadge } from "@/components/ui/number-badge";
+import { MobileSwipeRail } from "@/components/ui/mobile-swipe-rail";
 import { DecorativeAsset, DoodleDecoration } from "@/components/ui/doodle-decoration";
 import { DecoratedCTASection } from "@/components/ui/decorated-cta-section";
 import { PaperPanel } from "@/components/ui/paper-panel";
@@ -257,7 +258,17 @@ export function HomePageContent({
               Explore Voices <ArrowIcon />
             </LinkButton>
           </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+          <MobileSwipeRail
+            label="Swipe through Voices from the Circle"
+            hint="Swipe voices"
+            className="mt-10"
+          >
+            <VoiceCard voice={voices[0]} mobileSwipe />
+            <VoiceCard voice={voices[1]} mobileSwipe />
+            <VoiceCard voice={voices[2]} mobileSwipe />
+          </MobileSwipeRail>
+
+          <div className="mt-10 hidden gap-6 md:grid lg:grid-cols-[1.25fr_0.75fr]">
             <VoiceCard voice={voices[0]} featured />
             <div className="grid gap-6">
               <VoiceCard voice={voices[1]} />

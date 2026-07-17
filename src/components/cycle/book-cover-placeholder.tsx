@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 
 import { assets } from "@/lib/assets";
 import type { MockBook } from "@/lib/content-types";
@@ -39,6 +39,36 @@ export function BookCoverPlaceholder({
   className?: string;
 }) {
   const styles = coverStyles[book.coverTone];
+
+  if (book.coverImage) {
+    return (
+      <div
+        className={cn(
+          "relative mx-auto aspect-[2/3] w-full max-w-64",
+          className,
+        )}
+      >
+        <div className="border-ink shadow-paper absolute inset-0 overflow-hidden rounded-l-md rounded-r-2xl border-2 bg-cream p-2">
+          <Image
+            src={book.coverImage.src}
+            alt={book.coverImage.alt}
+            fill
+            sizes="(min-width: 1024px) 18rem, (min-width: 768px) 14rem, 55vw"
+            className="object-cover"
+            priority={book.status === "current"}
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-3 left-3 border-l border-white/45 mix-blend-screen"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          className="border-ink/30 absolute top-2 bottom-2 left-2 w-px border-l"
+        />
+      </div>
+    );
+  }
 
   return (
     <div

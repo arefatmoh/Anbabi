@@ -1,7 +1,8 @@
-﻿export const assets = {
+export const assets = {
   brand: {
     logoPrimary: "/assets/brand/anbabi-logo-primary.webp",
     logoInverse: "/assets/brand/anbabi-logo-inverse.webp",
+    logoFooter: "/assets/brand/anbabi-logo-footer.webp",
     mark: "/assets/brand/anbabi-mark.webp",
     markInverse: "/assets/brand/anbabi-mark-inverse.webp",
   },

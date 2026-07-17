@@ -4,17 +4,33 @@ import Link from "next/link";
 import { assets } from "@/lib/assets";
 import { cn } from "@/lib/utils";
 
+type BrandLogoTone = "primary" | "inverse" | "footer";
+
 type BrandLogoProps = {
   inverse?: boolean;
+  tone?: BrandLogoTone;
   compact?: boolean;
   className?: string;
 };
 
 export function BrandLogo({
   inverse = false,
+  tone,
   compact = false,
   className,
 }: BrandLogoProps) {
+  const resolvedTone: BrandLogoTone = tone ?? (inverse ? "inverse" : "primary");
+
+  const logoSrc = compact
+    ? resolvedTone === "inverse" || resolvedTone === "footer"
+      ? assets.brand.markInverse
+      : assets.brand.mark
+    : resolvedTone === "footer"
+      ? assets.brand.logoFooter
+      : resolvedTone === "inverse"
+        ? assets.brand.logoInverse
+        : assets.brand.logoPrimary;
+
   return (
     <Link
       href="/"
@@ -25,15 +41,7 @@ export function BrandLogo({
       )}
     >
       <Image
-        src={
-          compact
-            ? inverse
-              ? assets.brand.markInverse
-              : assets.brand.mark
-            : inverse
-              ? assets.brand.logoInverse
-              : assets.brand.logoPrimary
-        }
+        src={logoSrc}
         alt="Read & Revive / አንባቢ"
         width={compact ? 305 : 306}
         height={compact ? 199 : 238}

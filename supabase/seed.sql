@@ -6,7 +6,7 @@
 begin;
 
 insert into public.books (
-  slug, title, author, cover_label, cover_tone, description, long_description,
+  slug, title, author, cover_label, cover_tone, cover_url, cover_alt, description, long_description,
   why_featured, category, themes, language, status, status_label,
   reading_time_label, reader_fit, discussion_prompts, sort_order, is_mock, approved_for_production
 ) values
@@ -16,6 +16,8 @@ insert into public.books (
     'Cal Newport',
     'Read & Revive Pick',
     'charcoal',
+    'https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg',
+    'Deep Work by Cal Newport book cover',
     'A practical exploration of focused work, attention, and meaningful results in a distracted world.',
     'Deep Work examines the value of sustained, distraction-free concentration and the routines that make it possible. It gives readers a useful language for noticing shallow habits, protecting attention, and making room for demanding work that matters.',
     'The book gives the circle a practical question to test together: what becomes possible when we protect our attention? Its ideas move naturally from private reading into shared experiments and reflection.',
@@ -37,6 +39,8 @@ insert into public.books (
     'James Clear',
     'Practice & Growth',
     'paper',
+    'https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg',
+    'Atomic Habits by James Clear book cover',
     'A clear framework for understanding how small repeated choices shape habits and identity.',
     'Atomic Habits offers a practical way to examine cues, routines, environments, and identity. Its strength is not a promise of instant transformation, but a set of concrete questions about how small systems make helpful behavior easier to repeat.',
     'This is a useful companion for readers who want to turn an insight into a repeatable practice. It works especially well with reflection because its ideas can be tested in ordinary routines.',
@@ -58,6 +62,8 @@ insert into public.books (
     'Paulo Coelho',
     'Story & Purpose',
     'orange',
+    'https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg',
+    'The Alchemist by Paulo Coelho book cover',
     'A fable about purpose, uncertainty, and learning to notice what the journey is teaching.',
     'The Alchemist follows a young shepherd whose search for treasure becomes a larger meditation on courage, desire, signs, and the meaning we make from a journey. Its accessible form opens space for different readers to question what purpose and risk look like in their own lives.',
     'The story is approachable while leaving room for disagreement and interpretation. It gives a circle many entry points: ambition, fear, faith, choice, and what it means to listen carefully.',
@@ -78,6 +84,8 @@ on conflict (slug) do update set
   author = excluded.author,
   cover_label = excluded.cover_label,
   cover_tone = excluded.cover_tone,
+  cover_url = excluded.cover_url,
+  cover_alt = excluded.cover_alt,
   description = excluded.description,
   long_description = excluded.long_description,
   why_featured = excluded.why_featured,

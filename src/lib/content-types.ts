@@ -1,4 +1,4 @@
-﻿export type CycleStatus =
+export type CycleStatus =
   "draft" | "upcoming" | "active" | "closing" | "completed" | "archived";
 
 export type TimelineState =
@@ -7,6 +7,12 @@ export type TimelineState =
 export type BookStatus = "current" | "completed-cycle" | "recommended";
 export type BookCoverTone = "charcoal" | "orange" | "paper";
 
+export type BookCoverImage = {
+  src: string;
+  alt: string;
+  sourceLabel?: string;
+};
+
 export type MockBook = {
   isMock: true;
   slug: string;
@@ -14,6 +20,7 @@ export type MockBook = {
   author: string;
   coverLabel: string;
   coverTone: BookCoverTone;
+  coverImage?: BookCoverImage;
   description: string;
   longDescription: string;
   themes: readonly string[];

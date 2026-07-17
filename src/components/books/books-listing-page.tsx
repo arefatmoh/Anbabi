@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/container";
 import { DecorativeAsset } from "@/components/ui/doodle-decoration";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { NumberBadge } from "@/components/ui/number-badge";
+import { MobileSwipeRail } from "@/components/ui/mobile-swipe-rail";
 import { DecoratedCTASection } from "@/components/ui/decorated-cta-section";
 import { EmptyState } from "@/components/ui/empty-state";
 import { PaperPanel } from "@/components/ui/paper-panel";
@@ -211,16 +212,32 @@ export function BooksListingPage({
           </nav>
 
           {visibleBooks.length > 0 ? (
-            <div className="mt-10 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-              {visibleBooks.map((book, index) => (
-                <BookCard
-                  key={book.slug}
-                  book={book}
-                  relatedVoices={voiceCount(book)}
-                  className={index === 1 ? "lg:translate-y-6" : undefined}
-                />
-              ))}
-            </div>
+            <>
+              <MobileSwipeRail
+                label="Swipe through The reading shelf"
+                hint="Swipe shelf"
+                className="mt-10"
+              >
+                {visibleBooks.map((book) => (
+                  <BookCard
+                    key={book.slug}
+                    book={book}
+                    relatedVoices={voiceCount(book)}
+                  />
+                ))}
+              </MobileSwipeRail>
+
+              <div className="mt-10 hidden gap-7 md:grid md:grid-cols-2 lg:grid-cols-3">
+                {visibleBooks.map((book, index) => (
+                  <BookCard
+                    key={book.slug}
+                    book={book}
+                    relatedVoices={voiceCount(book)}
+                    className={index === 1 ? "lg:translate-y-6" : undefined}
+                  />
+                ))}
+              </div>
+            </>
           ) : (
             <div className="mt-10">
               <EmptyState

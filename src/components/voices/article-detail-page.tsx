@@ -10,6 +10,8 @@ import { DecorativeAsset, DoodleDecoration } from "@/components/ui/doodle-decora
 import { SectionDivider } from "@/components/ui/section-divider";
 import { DecoratedCTASection } from "@/components/ui/decorated-cta-section";
 import { PaperPanel } from "@/components/ui/paper-panel";
+import { ReactionBar } from "@/components/ui/reaction-bar";
+import { ReadAloudControls } from "@/components/ui/read-aloud-controls";
 import { Section } from "@/components/ui/section";
 import { assets } from "@/lib/assets";
 import type { MockVoice, ReadingCycle } from "@/lib/content-types";
@@ -59,6 +61,15 @@ export function ArticleDetailPage({
   currentCycle: ReadingCycle;
   relatedVoices: readonly MockVoice[];
 }) {
+  const articleReadAloudText = article.sections
+    .flatMap((section) => [
+      section.heading,
+      ...section.paragraphs,
+      section.pullQuote,
+    ])
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <>
       <article>
@@ -106,6 +117,11 @@ export function ArticleDetailPage({
                   />
                   <ShareActions article={article} />
                 </div>
+                <ReadAloudControls
+                  title={article.title}
+                  text={articleReadAloudText}
+                  className="mt-6 max-w-3xl"
+                />
               </header>
 
               <div className="relative mx-auto w-full max-w-xl">
@@ -184,6 +200,11 @@ export function ArticleDetailPage({
                       {article.authorNote}
                     </p>
                   </PaperPanel>
+                  <ReactionBar
+                    contentId={`voice-article:${article.slug}`}
+                    label={`React to ${article.title}`}
+                    className="mt-8"
+                  />
                 </div>
               </div>
 

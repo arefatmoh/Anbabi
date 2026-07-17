@@ -21,7 +21,7 @@ export function SiteFooter() {
       <Container>
         <div className="border-cream/20 grid gap-10 border-b pb-10 md:grid-cols-[1.25fr_0.75fr_1fr]">
           <div>
-            <BrandLogo inverse />
+            <BrandLogo tone="footer" />
             <p className="text-cream/70 mt-5 max-w-md text-sm leading-7 sm:text-base">
               A reading circle where books lead to reflection, discussion, and
               voices worth sharing.

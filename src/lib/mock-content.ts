@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   AboutCopy,
   AboutTrustMarker,
   AboutValue,
@@ -20,6 +20,11 @@ export const mockBooks: readonly MockBook[] = [
     author: "Cal Newport",
     coverLabel: "Read & Revive Pick",
     coverTone: "charcoal",
+    coverImage: {
+      src: "https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg",
+      alt: "Deep Work by Cal Newport book cover",
+      sourceLabel: "Open Library cover",
+    },
     description:
       "A practical exploration of focused work, attention, and meaningful results in a distracted world.",
     longDescription:
@@ -50,6 +55,11 @@ export const mockBooks: readonly MockBook[] = [
     author: "James Clear",
     coverLabel: "Practice & Growth",
     coverTone: "paper",
+    coverImage: {
+      src: "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+      alt: "Atomic Habits by James Clear book cover",
+      sourceLabel: "Open Library cover",
+    },
     description:
       "A clear framework for understanding how small repeated choices shape habits and identity.",
     longDescription:
@@ -80,6 +90,11 @@ export const mockBooks: readonly MockBook[] = [
     author: "Paulo Coelho",
     coverLabel: "Story & Purpose",
     coverTone: "orange",
+    coverImage: {
+      src: "https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg",
+      alt: "The Alchemist by Paulo Coelho book cover",
+      sourceLabel: "Open Library cover",
+    },
     description:
       "A fable about purpose, uncertainty, and learning to notice what the journey is teaching.",
     longDescription:
