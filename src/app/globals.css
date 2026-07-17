@@ -159,18 +159,47 @@ select {
 
 .reaction-confetti {
   position: absolute;
-  top: -1.2rem;
+  top: -0.45rem;
   left: 50%;
-  color: var(--color-brand-orange-deep);
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
+  display: grid;
+  width: 2.4rem;
+  height: 1.5rem;
   pointer-events: none;
   transform: translateX(-50%);
   animation: reaction-confetti-float 0.62s ease-out forwards;
 }
 
-.read-aloud-pulse.is-reading {
+.reaction-confetti span {
+  position: absolute;
+  width: 0.38rem;
+  height: 0.38rem;
+  background: var(--color-brand-orange);
+  border: 1px solid var(--color-ink);
+  border-radius: 999px;
+}
+
+.reaction-confetti span:nth-child(1) {
+  top: 0.25rem;
+  left: 0.2rem;
+}
+
+.reaction-confetti span:nth-child(2) {
+  top: 0;
+  left: 1rem;
+  background: var(--color-cream);
+}
+
+.reaction-confetti span:nth-child(3) {
+  top: 0.35rem;
+  right: 0.25rem;
+}
+
+.read-aloud-button.is-reading {
   animation: read-aloud-glow 1.4s ease-in-out infinite;
+}
+
+.animate-controls-in {
+  animation: controls-in 0.22s ease-out;
 }
 
 @keyframes reaction-pop {
@@ -206,13 +235,23 @@ select {
 @keyframes read-aloud-glow {
   0%,
   100% {
-    opacity: 0.35;
     transform: scale(1);
   }
 
   50% {
-    opacity: 0.75;
-    transform: scale(1.18);
+    transform: scale(1.06) rotate(-1deg);
+  }
+}
+
+@keyframes controls-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-0.35rem) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 

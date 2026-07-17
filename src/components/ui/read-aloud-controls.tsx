@@ -12,6 +12,39 @@ type ReadAloudControlsProps = {
 
 type ReadState = "idle" | "playing" | "paused" | "unsupported";
 
+function SpeakerIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none">
+      <path d="M4 10v4h4l5 4V6l-5 4H4Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M16 9.2a4 4 0 0 1 0 5.6M18.7 6.5a7.8 7.8 0 0 1 0 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function PlayIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none">
+      <path d="M8 5.5v13l10-6.5-10-6.5Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+function PauseIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none">
+      <path d="M8 5h3v14H8zM13 5h3v14h-3z" fill="currentColor" />
+    </svg>
+  );
+}
+
+function StopIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none">
+      <path d="M7 7h10v10H7z" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function ReadAloudControls({
   title,
   text,
@@ -72,66 +105,60 @@ export function ReadAloudControls({
 
   const isPlaying = state === "playing";
   const isPaused = state === "paused";
+  const hasStarted = isPlaying || isPaused;
 
   return (
-    <div
-      className={cn(
-        "border-ink bg-paper paper-grain relative overflow-hidden rounded-[1.5rem] border-2 p-4 shadow-[3px_3px_0_#111]",
-        className,
-      )}
-    >
-      <div
-        aria-hidden="true"
+    <div className={cn("flex items-center gap-2", className)}>
+      <button
+        type="button"
+        onClick={isPlaying ? pause : play}
+        aria-label={isPlaying ? "Pause read aloud" : isPaused ? "Resume read aloud" : "Read this voice aloud"}
+        aria-pressed={isPlaying}
         className={cn(
-          "read-aloud-pulse bg-brand-orange/25 absolute -top-10 -right-8 size-24 rounded-full blur-xl",
-          isPlaying && "is-reading",
+          "border-ink focus-visible:outline-brand-orange inline-flex size-12 items-center justify-center rounded-full border-2 shadow-[3px_3px_0_#111] transition focus-visible:outline-3 focus-visible:outline-offset-2",
+          isPlaying ? "read-aloud-button is-reading bg-brand-orange text-ink" : "bg-cream text-ink hover:bg-peach",
         )}
-      />
-      <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p className="text-xs font-extrabold tracking-[0.14em] uppercase">
-            Listen to this voice
-          </p>
-          <p className="text-ink/65 mt-1 text-sm">
-            {state === "unsupported"
-              ? "Read aloud is not supported in this browser."
-              : isPlaying
-                ? "Reading now ? pause anytime."
-                : isPaused
-                  ? "Paused. Continue when you are ready."
-                  : "Let the browser read the reflection aloud."}
-          </p>
-        </div>
-        {state !== "unsupported" ? (
-          <div className="flex flex-wrap gap-2">
+      >
+        {isPaused ? <PlayIcon className="size-5" /> : isPlaying ? <PauseIcon className="size-5" /> : <SpeakerIcon className="size-6" />}
+      </button>
+
+      {hasStarted ? (
+        <div className="animate-controls-in flex items-center gap-2">
+          {isPlaying ? (
+            <button
+              type="button"
+              onClick={pause}
+              aria-label="Pause read aloud"
+              className="border-ink bg-cream focus-visible:outline-brand-orange inline-flex size-11 items-center justify-center rounded-full border-2 shadow-[2px_2px_0_#111] focus-visible:outline-3 focus-visible:outline-offset-2"
+            >
+              <PauseIcon className="size-5" />
+            </button>
+          ) : (
             <button
               type="button"
               onClick={play}
-              className="border-ink bg-brand-orange focus-visible:outline-brand-orange inline-flex min-h-11 items-center rounded-full border-2 px-4 text-sm font-extrabold shadow-[2px_2px_0_#111] focus-visible:outline-3 focus-visible:outline-offset-2"
+              aria-label="Resume read aloud"
+              className="border-ink bg-brand-orange focus-visible:outline-brand-orange inline-flex size-11 items-center justify-center rounded-full border-2 shadow-[2px_2px_0_#111] focus-visible:outline-3 focus-visible:outline-offset-2"
             >
-              {isPaused ? "Resume" : "Read aloud"}
+              <PlayIcon className="size-5" />
             </button>
-            {isPlaying ? (
-              <button
-                type="button"
-                onClick={pause}
-                className="border-ink bg-cream focus-visible:outline-brand-orange inline-flex min-h-11 items-center rounded-full border-2 px-4 text-sm font-bold focus-visible:outline-3 focus-visible:outline-offset-2"
-              >
-                Pause
-              </button>
-            ) : null}
-            {isPlaying || isPaused ? (
-              <button
-                type="button"
-                onClick={stop}
-                className="border-ink/25 bg-cream/80 focus-visible:outline-brand-orange inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-bold focus-visible:outline-3 focus-visible:outline-offset-2"
-              >
-                Stop
-              </button>
-            ) : null}
-          </div>
-        ) : null}
-      </div>
+          )}
+          <button
+            type="button"
+            onClick={stop}
+            aria-label="Stop read aloud"
+            className="border-ink/30 bg-cream/85 focus-visible:outline-brand-orange inline-flex size-11 items-center justify-center rounded-full border-2 text-ink/80 focus-visible:outline-3 focus-visible:outline-offset-2"
+          >
+            <StopIcon className="size-5" />
+          </button>
+        </div>
+      ) : null}
+
+      {state === "unsupported" ? (
+        <span className="text-ink/60 text-xs font-semibold">
+          Audio not supported
+        </span>
+      ) : null}
     </div>
   );
 }

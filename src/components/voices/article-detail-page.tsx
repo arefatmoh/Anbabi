@@ -23,30 +23,69 @@ const coverAssets = {
   reader: assets.illustrations.singleReader,
 } as const;
 
+function TelegramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none">
+      <path
+        d="M20.5 4.7 3.8 11.1c-1.1.4-1.1 1.9.1 2.2l4.2 1.2 1.6 4.9c.3 1 1.6 1.2 2.2.4l2.4-3.1 4.3 3.2c.9.7 2.2.2 2.4-.9l2.2-12.7c.2-1.1-.9-2-2-1.6Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="m8.3 14.4 8.5-5.3-6.7 7.5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function EmailIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none">
+      <path
+        d="M4.5 6.5h15v11h-15v-11Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="m5.2 7.2 6.8 5.5 6.8-5.5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function ShareActions({ article }: { article: MockVoice }) {
   const url = `${siteConfig.siteUrl}/voices/${article.slug}`;
   const telegram = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(article.title)}`;
   const email = `mailto:?subject=${encodeURIComponent(article.title)}&body=${encodeURIComponent(url)}`;
 
   return (
-    <div
-      className="flex flex-wrap items-center gap-3"
-      aria-label="Share article"
-    >
+    <div className="flex flex-wrap items-center gap-3" aria-label="Share article">
       <span className="text-sm font-bold">Share</span>
       <a
         href={telegram}
         target="_blank"
         rel="noreferrer"
-        className="border-ink bg-cream focus-visible:outline-brand-orange hover:bg-peach inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-semibold focus-visible:outline-3 focus-visible:outline-offset-2"
+        aria-label="Share on Telegram"
+        className="border-ink bg-cream focus-visible:outline-brand-orange hover:bg-peach inline-flex size-12 items-center justify-center rounded-full border-2 text-ink shadow-[2px_2px_0_#111] transition focus-visible:outline-3 focus-visible:outline-offset-2"
       >
-        Telegram
+        <TelegramIcon className="size-5" />
       </a>
       <a
         href={email}
-        className="border-ink bg-cream focus-visible:outline-brand-orange hover:bg-peach inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-semibold focus-visible:outline-3 focus-visible:outline-offset-2"
+        aria-label="Share by email"
+        className="border-ink bg-cream focus-visible:outline-brand-orange hover:bg-peach inline-flex size-12 items-center justify-center rounded-full border-2 text-ink shadow-[2px_2px_0_#111] transition focus-visible:outline-3 focus-visible:outline-offset-2"
       >
-        Email
+        <EmailIcon className="size-5" />
       </a>
     </div>
   );
@@ -108,7 +147,7 @@ export function ArticleDetailPage({
                   <span aria-hidden="true">·</span>
                   <span>{article.readingTime}</span>
                 </div>
-                <div className="relative mt-6">
+                <div className="relative mt-6 flex flex-wrap items-center gap-3">
                   <DoodleDecoration
                     asset="emphasisArrow"
                     width={140}
@@ -116,12 +155,11 @@ export function ArticleDetailPage({
                     className="absolute -right-8 -top-8 hidden w-20 rotate-12 opacity-55 lg:block"
                   />
                   <ShareActions article={article} />
+                  <ReadAloudControls
+                    title={article.title}
+                    text={articleReadAloudText}
+                  />
                 </div>
-                <ReadAloudControls
-                  title={article.title}
-                  text={articleReadAloudText}
-                  className="mt-6 max-w-3xl"
-                />
               </header>
 
               <div className="relative mx-auto w-full max-w-xl">

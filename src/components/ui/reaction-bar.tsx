@@ -29,6 +29,44 @@ function seededCount(seed: string, offset: number) {
   return 12 + (hash % 38);
 }
 
+function LikeIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+      fill="none"
+    >
+      <path
+        d="M7.5 10.5v9M7.5 10.5l4.2-6.2c.8-1.1 2.6-.5 2.5.9l-.3 4.1h4.1c1.7 0 2.9 1.6 2.4 3.2l-1.4 4.7a3 3 0 0 1-2.9 2.1H5.4a2.1 2.1 0 0 1-2.1-2.1v-4.6c0-1.2.9-2.1 2.1-2.1h2.1Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function LoveIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+      fill="none"
+    >
+      <path
+        d="M12 20.2S4.6 15.8 3.1 10.4C2.1 6.8 4.4 4 7.6 4c1.9 0 3.3 1 4.4 2.4C13.1 5 14.5 4 16.4 4c3.2 0 5.5 2.8 4.5 6.4C19.4 15.8 12 20.2 12 20.2Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function ReactionBar({
   contentId,
   label = "React to this voice",
@@ -85,8 +123,8 @@ export function ReactionBar({
   }
 
   const reactions = [
-    { type: "like" as const, label: "Like", icon: "??", count: state.likes },
-    { type: "love" as const, label: "Love", icon: "?", count: state.loves },
+    { type: "like" as const, label: "Like", Icon: LikeIcon, count: state.likes },
+    { type: "love" as const, label: "Love", Icon: LoveIcon, count: state.loves },
   ];
 
   return (
@@ -106,29 +144,28 @@ export function ReactionBar({
       <div className="flex flex-wrap items-center gap-3">
         {reactions.map((reaction) => {
           const active = state.selected === reaction.type;
+          const Icon = reaction.Icon;
 
           return (
             <button
               key={reaction.type}
               type="button"
               onClick={() => react(reaction.type)}
+              aria-label={`${reaction.label} this voice`}
               aria-pressed={active}
               className={cn(
                 "reaction-button border-ink focus-visible:outline-brand-orange relative inline-flex min-h-11 items-center gap-2 rounded-full border-2 font-extrabold transition focus-visible:outline-3 focus-visible:outline-offset-2",
-                compact ? "px-3 text-xs" : "px-5 text-sm",
+                compact ? "px-3" : "px-4",
                 active
                   ? "bg-brand-orange text-ink shadow-[3px_3px_0_#111]"
                   : "bg-cream text-ink hover:bg-peach shadow-[2px_2px_0_#111]",
                 burst === reaction.type && "is-bursting",
               )}
             >
-              <span aria-hidden="true" className="text-base">
-                {reaction.icon}
-              </span>
-              <span>{reaction.label}</span>
+              <Icon className="size-5" />
               <span
                 className={cn(
-                  "rounded-full px-2 py-0.5 tabular-nums",
+                  "rounded-full px-2 py-0.5 text-xs tabular-nums",
                   active ? "bg-cream/70" : "bg-ink/8",
                 )}
               >
@@ -136,7 +173,9 @@ export function ReactionBar({
               </span>
               {burst === reaction.type ? (
                 <span className="reaction-confetti" aria-hidden="true">
-                  ? ? ?
+                  <span />
+                  <span />
+                  <span />
                 </span>
               ) : null}
             </button>
