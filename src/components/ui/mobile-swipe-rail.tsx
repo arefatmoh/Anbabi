@@ -23,6 +23,7 @@ export function MobileSwipeRail({
 }: MobileSwipeRailProps) {
   const items = Children.toArray(children);
   const railRef = useRef<HTMLUListElement>(null);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   function scrollToIndex(index: number) {
@@ -64,6 +65,31 @@ export function MobileSwipeRail({
     });
 
     setActiveIndex(closestIndex);
+  }
+
+  function rememberTouchStart(event: React.TouchEvent<HTMLUListElement>) {
+    const touch = event.touches[0];
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+  }
+
+  function releaseVerticalScroll(event: React.TouchEvent<HTMLUListElement>) {
+    const start = touchStartRef.current;
+    const rail = railRef.current;
+    const touch = event.touches[0];
+
+    if (!start || !rail || !touch) return;
+
+    const deltaX = Math.abs(touch.clientX - start.x);
+    const deltaY = Math.abs(touch.clientY - start.y);
+
+    rail.style.scrollSnapType = deltaY > deltaX ? "none" : "x mandatory";
+  }
+
+  function restoreSnap() {
+    const rail = railRef.current;
+
+    touchStartRef.current = null;
+    if (rail) rail.style.scrollSnapType = "x mandatory";
   }
 
   return (
@@ -108,7 +134,11 @@ export function MobileSwipeRail({
           ref={railRef}
           aria-label={label}
           onScroll={updateActiveIndex}
-          className="mobile-swipe-rail flex touch-pan-x snap-x snap-mandatory items-stretch gap-4 overflow-x-auto overscroll-x-contain scroll-smooth pb-3 pr-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          onTouchStart={rememberTouchStart}
+          onTouchMove={releaseVerticalScroll}
+          onTouchEnd={restoreSnap}
+          onTouchCancel={restoreSnap}
+          className="mobile-swipe-rail flex touch-pan-y snap-x snap-mandatory items-stretch gap-4 overflow-x-auto overscroll-x-contain scroll-smooth pb-3 pr-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {items.map((item, index) => (
             <li
