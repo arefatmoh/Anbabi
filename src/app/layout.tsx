@@ -20,10 +20,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.shortName,
   icons: {
-    icon: [
-      { url: "/assets/brand/anbabi-icon-32.png", sizes: "32x32" },
-      { url: "/assets/brand/anbabi-icon-192.png", sizes: "192x192" },
-    ],
+    icon: "/favicon.svg?v=3",
     apple: "/assets/brand/anbabi-icon-180.png",
   },
   openGraph: {
