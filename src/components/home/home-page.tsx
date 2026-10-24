@@ -211,7 +211,6 @@ export function HomePageContent({
             <SectionHeader
               eyebrow="Voices from the Circle"
               title="Reading leaves a trace."
-              description="Reflections, questions, and experiments that began with the current book and grew through conversation."
             />
             <LinkButton href="/voices" variant="ghost">
               Explore Voices <ArrowIcon />
@@ -227,12 +226,10 @@ export function HomePageContent({
             <VoiceCard voice={voices[2]} mobileSwipe />
           </MobileSwipeRail>
 
-          <div className="mt-10 hidden gap-6 md:grid lg:grid-cols-[1.25fr_0.75fr]">
-            <VoiceCard voice={voices[0]} featured />
-            <div className="grid gap-6">
-              <VoiceCard voice={voices[1]} />
-              <VoiceCard voice={voices[2]} />
-            </div>
+          <div className="home-voices-grid mt-10 hidden gap-6 md:grid md:grid-cols-2 xl:grid-cols-3">
+            <VoiceCard voice={voices[0]} />
+            <VoiceCard voice={voices[1]} />
+            <VoiceCard voice={voices[2]} />
           </div>
         </Container>
       </Section>

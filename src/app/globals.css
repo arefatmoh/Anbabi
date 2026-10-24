@@ -242,11 +242,24 @@ select {
   box-shadow: 4px 6px 0 rgb(249 115 22 / 20%);
 }
 
+.home-voices-grid {
+  grid-auto-rows: 1fr;
+}
+
+.home-voices-grid > article {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.home-voices-grid > article > div:last-child {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 .home-program-cta {
-  background-image: url("/assets/decorations/cta/corner-flourish-01.webp");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: auto 100%;
+  background-image: none;
 }
 
 @keyframes impact-arrive {
