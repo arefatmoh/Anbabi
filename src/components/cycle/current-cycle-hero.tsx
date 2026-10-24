@@ -19,9 +19,11 @@ const metadata = [
 export function CurrentCycleHero({
   cycle,
   compact = false,
+  showStatusBadge = true,
 }: {
   cycle: ReadingCycle;
   compact?: boolean;
+  showStatusBadge?: boolean;
 }) {
   return (
     <PaperPanel
@@ -55,9 +57,11 @@ export function CurrentCycleHero({
           className={compact ? "max-w-52" : "max-w-72"}
         />
         <div className="relative z-10">
-          <div className="flex flex-wrap gap-2">
-            <CycleStatusChip status={cycle.status} label={cycle.statusLabel} />
-          </div>
+          {showStatusBadge ? (
+            <div className="flex flex-wrap gap-2">
+              <CycleStatusChip status={cycle.status} label={cycle.statusLabel} />
+            </div>
+          ) : null}
           <p className="font-note text-brand-orange-deep mt-5 text-2xl">
             Current Reading Cycle
           </p>

@@ -68,12 +68,6 @@ export function HomePageContent({
       </section>
 
       <Section className="relative overflow-hidden bg-cream">
-        <DoodleDecoration
-          asset="sparkleAlt"
-          width={132}
-          height={128}
-          className="absolute top-14 left-[7%] hidden w-14 opacity-55 lg:block"
-        />
         <DecorativeAsset
           src={assets.cycle.calendar}
           width={170}
@@ -90,10 +84,9 @@ export function HomePageContent({
           <SectionHeader
             eyebrow="Start here"
             title="The Current Reading Cycle"
-            description="Read Deep Work in a clear four-week rhythm, reflect on attention and distraction, and bring the strongest questions back to the circle."
           />
           <div className="mt-10">
-            <CurrentCycleHero cycle={cycle} compact />
+            <CurrentCycleHero cycle={cycle} compact showStatusBadge={false} />
           </div>
         </Container>
       </Section>
@@ -123,7 +116,6 @@ export function HomePageContent({
           <SectionHeader
             eyebrow="How the circle works"
             title="A book becomes a shared journey."
-            description="Each step moves reading toward thought, conversation, expression, and another person’s beginning."
             align="center"
           />
           <ol className="journey-line mx-auto mt-12 grid max-w-6xl gap-5 md:grid-cols-3 lg:grid-cols-6">
@@ -134,7 +126,7 @@ export function HomePageContent({
               >
                 <NumberBadge
                   value={index + 1}
-                  shape={index % 2 === 0 ? "sticker" : "dashed"}
+                  shape="sticker"
                   tilted={index % 2 === 1}
                 />
                 <h3 className="font-display mt-4 text-2xl font-semibold">

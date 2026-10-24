@@ -19,7 +19,7 @@
     system-ui, sans-serif;
   --font-note: "Caveat Variable", "Noto Sans Ethiopic", cursive;
 
-  --shadow-paper: 6px 7px 0 #111111;
+  --shadow-paper: none;
 
   --duration-standard: 220ms;
 }
@@ -30,6 +30,10 @@
 
 * {
   box-sizing: border-box;
+}
+
+:where([class*="shadow-"]) {
+  box-shadow: none !important;
 }
 
 img[alt=""] {
