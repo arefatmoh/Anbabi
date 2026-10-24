@@ -38,15 +38,15 @@ export function HomePageContent({
         <Container className="grid items-center gap-6 md:grid-cols-[1.3fr_1fr] md:gap-4 lg:gap-10">
           <div className="relative z-10">
             <h1 className="home-hero-heading font-display font-semibold">
-              <span className="block">Reviving</span>{" "}
-              <span className="mt-2 block whitespace-nowrap">
+              <span className="home-hero-line home-hero-line-first block">Reviving</span>{" "}
+              <span className="home-hero-line home-hero-line-second mt-2 block whitespace-nowrap">
                 Reading <span className="home-hero-culture font-note text-brand-orange">Culture</span>
               </span>
             </h1>
             <p className="home-hero-tagline mt-6 font-semibold">
               Reading, Sharing, and Connecting.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-5">
+            <div className="home-hero-actions mt-7 flex flex-wrap items-center gap-3 sm:gap-5">
               <LinkButton href="/books" className="home-hero-button home-hero-button-orange">
                 Explore Books <ArrowIcon />
               </LinkButton>
