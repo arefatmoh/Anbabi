@@ -7,11 +7,50 @@ import type {
   CommunityRhythmStep,
   ContactInquiry,
   ContactPrinciple,
+  HomeImpactStat,
+  HomeProgram,
   MockBook,
   MockVoice,
   PolicyPageContent,
   ReadingCycle,
 } from "@/lib/content-types";
+
+export const homeImpactStats: readonly HomeImpactStat[] = [
+  { value: 50, suffix: "+", label: "members" },
+  { value: 3, suffix: "+", label: "training & workshops" },
+  { value: 3, suffix: "+", label: "books read" },
+  { value: 200, suffix: "+", label: "daily blog readers" },
+];
+
+export const homePrograms: readonly HomeProgram[] = [
+  {
+    category: "Skills",
+    title: "Write Your World",
+    description:
+      "A practical writing workshop for young people who want to put their ideas on paper, build confidence, and share their perspective.",
+    action: "Apply Now",
+    status: "open",
+    href: "/contact",
+  },
+  {
+    category: "Leadership",
+    title: "Young Leaders Circle",
+    description:
+      "A peer-led program for young people interested in community leadership, local initiatives, and mentoring others in the circle.",
+    action: "Apply Now",
+    status: "open",
+    href: "/contact",
+  },
+  {
+    category: "Reading",
+    title: "The Art of Reading",
+    description:
+      "A guided reading experience that helps readers build habits, ask better questions, and explore ideas together.",
+    action: "Closed",
+    status: "closed",
+    href: "/books",
+  },
+];
 export const mockBooks: readonly MockBook[] = [
   {
     isMock: true,

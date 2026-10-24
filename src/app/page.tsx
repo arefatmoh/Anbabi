@@ -9,6 +9,8 @@ export default async function HomePage() {
       cycle={content.currentCycle}
       voices={content.featuredVoices}
       journey={content.journey}
+      impactStats={content.impactStats}
+      programs={content.programs}
     />
   );
 }

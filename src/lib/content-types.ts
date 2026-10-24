@@ -65,6 +65,21 @@ export type JourneyStep = {
   description: string;
 };
 
+export type HomeImpactStat = {
+  value: number;
+  suffix: string;
+  label: string;
+};
+
+export type HomeProgram = {
+  category: string;
+  title: string;
+  description: string;
+  action: string;
+  status: "open" | "closed";
+  href: string;
+};
+
 export type ArticleSection = {
   heading?: string;
   paragraphs: readonly string[];

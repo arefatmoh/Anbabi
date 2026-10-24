@@ -1,7 +1,7 @@
-import Image from "next/image";
-
 import { CurrentCycleHero } from "@/components/cycle/current-cycle-hero";
-import { ProgressPreview } from "@/components/home/progress-preview";
+import { HomeImpactStats, HomePrograms } from "@/components/home/home-impact-programs";
+import { ReaderDoodles } from "@/components/home/reader-doodles";
+import { ReadingValues } from "@/components/home/reading-values";
 import { VoiceCard } from "@/components/voices/voice-card";
 import { ArrowIcon, LinkButton } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -14,95 +14,58 @@ import { PaperPanel } from "@/components/ui/paper-panel";
 import { Section } from "@/components/ui/section";
 import { SectionHeader } from "@/components/ui/section-header";
 import { assets } from "@/lib/assets";
-import type { JourneyStep, MockVoice, ReadingCycle } from "@/lib/content-types";
+import type { HomeImpactStat, HomeProgram, JourneyStep, MockVoice, ReadingCycle } from "@/lib/content-types";
 import { siteConfig } from "@/lib/site";
 
 type HomePageContentProps = {
   cycle: ReadingCycle;
   voices: readonly MockVoice[];
   journey: readonly JourneyStep[];
+  impactStats: readonly HomeImpactStat[];
+  programs: readonly HomeProgram[];
 };
 
 export function HomePageContent({
   cycle,
   voices,
   journey,
+  impactStats,
+  programs,
 }: HomePageContentProps) {
   return (
     <>
-      <Section className="relative overflow-hidden pt-8 sm:pt-10 lg:pt-12">
-        <Container className="grid items-center gap-10 lg:grid-cols-[1.03fr_0.97fr] lg:gap-14">
+      <section className="home-hero relative overflow-hidden bg-paper">
+        <Container className="grid items-center gap-6 md:grid-cols-[1.3fr_1fr] md:gap-4 lg:gap-10">
           <div className="relative z-10">
-            <p className="font-note text-brand-orange-deep text-2xl sm:text-3xl">
-              Your next chapter is better together.
-            </p>
-            <h1 className="font-display mt-4 max-w-3xl text-[clamp(2.7rem,13.5vw,5.25rem)] leading-[0.92] font-semibold tracking-[-0.055em] text-balance">
-              Read together. Reflect deeply.{" "}
-              <span className="text-brand-orange-deep relative inline-block">
-                Revive
-                <Image
-                  src={assets.doodles.underlineOrange}
-                  alt=""
-                  width={266}
-                  height={44}
-                  className="pointer-events-none absolute -bottom-3 left-0 h-4 w-full object-fill"
-                />
-              </span>{" "}
-              your mind.
+            <h1 className="home-hero-heading font-display font-semibold">
+              <span className="block">Reviving</span>{" "}
+              <span className="mt-2 block whitespace-nowrap">
+                Reading <span className="home-hero-culture font-note text-brand-orange">Culture</span>
+              </span>
             </h1>
-            <p className="text-ink/72 mt-7 max-w-2xl text-base leading-8 sm:text-lg">
-              Read & Revive / አንባቢ is a welcoming reading movement for young
-              people in Ethiopia—built around shared books, honest reflection,
-              thoughtful discussion, and emerging voices.
+            <p className="home-hero-tagline mt-6 font-semibold">
+              Reading, Sharing, and Connecting.
             </p>
-            <div className="relative mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <DoodleDecoration
-                asset="arrowLoopAlt"
-                width={175}
-                height={128}
-                className="absolute -right-6 -bottom-10 hidden w-24 rotate-[-10deg] opacity-55 lg:block lg:right-10"
-              />
-              <LinkButton href={siteConfig.telegramUrl} external size="lg">
-                Join Current Reading Cycle <ArrowIcon />
+            <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-5">
+              <LinkButton href="/books" className="home-hero-button home-hero-button-orange">
+                Explore Books <ArrowIcon />
               </LinkButton>
-              <LinkButton href="/books" variant="secondary" size="lg">
-                Explore Books
+              <LinkButton href="/voices" variant="secondary" className="home-hero-button home-hero-button-ink">
+                Browse Voices <ArrowIcon />
               </LinkButton>
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-2xl">
-            <div className="paper-grain border-ink bg-peach shadow-paper relative overflow-hidden rounded-[2.25rem] border-2 px-5 pt-8 sm:rounded-[3rem] sm:px-8 sm:pt-10">
-              <Image
-                src={assets.illustrations.heroReadingGroup}
-                alt="Young readers sharing books and ideas together"
-                width={1393}
-                height={819}
-                className="relative z-10 h-auto w-full"
-                priority
-                sizes="(max-width: 1024px) 90vw, 46vw"
-              />
-            </div>
-            <Image
-              src={assets.doodles.sparkleOrange}
-              alt=""
-              width={179}
-              height={175}
-              className="pointer-events-none absolute -top-7 -right-4 hidden w-16 rotate-12 sm:block lg:-right-8 lg:w-20"
-            />
-            <div className="absolute -bottom-8 left-3 hidden w-52 rotate-[-3deg] sm:block">
-              <DecorativeAsset
-                src={assets.stickers.stickyNoteCream}
-                width={260}
-                height={156}
-                className="h-auto w-full drop-shadow-[3px_3px_0_rgba(17,17,17,0.25)]"
-              />
-              <span className="font-note absolute inset-x-6 top-1/2 -translate-y-1/2 text-center text-2xl text-ink">
-                Books become circles.
-              </span>
-            </div>
+          <div className="mx-auto -mb-8 w-full max-w-[22rem] md:mb-0 md:max-w-none">
+            <ReaderDoodles />
           </div>
         </Container>
-      </Section>
+        <Container className="mt-16 sm:mt-20">
+          <ReadingValues />
+        </Container>
+        <div className="mt-8 sm:mt-10">
+          <HomeImpactStats stats={impactStats} />
+        </div>
+      </section>
 
       <Section className="relative overflow-hidden bg-cream">
         <DoodleDecoration
@@ -186,11 +149,7 @@ export function HomePageContent({
         </Container>
       </Section>
 
-      <Section className="bg-cream">
-        <Container>
-          <ProgressPreview />
-        </Container>
-      </Section>
+      <HomePrograms programs={programs} />
 
       <Section>
         <Container className="grid items-center gap-8 lg:grid-cols-[0.75fr_1.25fr]">
@@ -275,58 +234,6 @@ export function HomePageContent({
               <VoiceCard voice={voices[2]} />
             </div>
           </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <PaperPanel
-            surface="charcoal"
-            className="relative overflow-hidden p-7 sm:p-10 lg:p-12"
-          >
-            <DoodleDecoration
-              asset="ctaDashedArrow"
-              width={200}
-              height={110}
-              className="absolute top-20 left-[44%] hidden w-28 opacity-45 lg:block"
-            />
-            <DoodleDecoration
-              asset="ctaOpenBookAlt"
-              width={180}
-              height={150}
-              className="absolute right-8 bottom-7 hidden w-24 rotate-6 opacity-45 xl:block"
-            />
-            <div className="relative z-10 grid items-center gap-8 lg:grid-cols-[1fr_0.55fr]">
-              <div>
-                <p className="font-note text-brand-orange text-2xl">
-                  Welcome to the circle.
-                </p>
-                <h2 className="font-display mt-3 text-4xl leading-tight font-semibold sm:text-5xl">
-                  Telegram is where the reading conversation continues.
-                </h2>
-                <p className="text-cream/70 mt-5 max-w-2xl leading-8">
-                  Use it for cycle updates, weekly prompts, focused discussion,
-                  and the small encouragement that keeps a reading habit moving.
-                </p>
-                <LinkButton
-                  href={siteConfig.telegramUrl}
-                  external
-                  variant="inverse"
-                  size="lg"
-                  className="mt-7"
-                >
-                  Open Telegram <ArrowIcon />
-                </LinkButton>
-              </div>
-              <Image
-                src={assets.illustrations.currentReadingCycle}
-                alt="Readers moving through a shared reading cycle"
-                width={1237}
-                height={1012}
-                className="mx-auto w-full max-w-sm"
-              />
-            </div>
-          </PaperPanel>
         </Container>
       </Section>
 

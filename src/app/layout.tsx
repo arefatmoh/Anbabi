@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FFF7ED",
+  themeColor: "#FFFDF9",
   colorScheme: "light",
 };
 
@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <body>
+      <body suppressHydrationWarning>
         <a
           href="#main-content"
           className="bg-ink text-cream focus:outline-brand-orange fixed top-3 left-3 z-[100] -translate-y-20 rounded-xl px-4 py-3 font-bold transition focus:translate-y-0 focus:outline-3 focus:outline-offset-2 motion-reduce:transition-none"

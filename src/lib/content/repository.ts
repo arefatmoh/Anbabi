@@ -8,6 +8,8 @@
   ContactInquiry,
   ContactPrinciple,
   JourneyStep,
+  HomeImpactStat,
+  HomeProgram,
   MockBook,
   MockVoice,
   PolicyPageContent,
@@ -29,12 +31,16 @@ import {
   mockCurrentCycle,
   mockVoices,
   readingJourney,
+  homeImpactStats,
+  homePrograms,
 } from "@/lib/mock-content";
 
 export type HomeContent = {
   currentCycle: ReadingCycle;
   featuredVoices: readonly MockVoice[];
   journey: readonly JourneyStep[];
+  impactStats: readonly HomeImpactStat[];
+  programs: readonly HomeProgram[];
 };
 
 export type CurrentCycleContent = {
@@ -89,6 +95,8 @@ export async function getHomeContent(): Promise<HomeContent> {
     currentCycle: mockCurrentCycle,
     featuredVoices: mockVoices.slice(0, 3),
     journey: readingJourney,
+    impactStats: homeImpactStats,
+    programs: homePrograms,
   };
 }
 

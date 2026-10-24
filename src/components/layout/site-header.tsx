@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { BrandLogo } from "@/components/brand/brand-logo";
-import { ArrowIcon, LinkButton } from "@/components/ui/button";
+import { ArrowIcon } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { primaryNavigation, siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -32,8 +32,36 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
+function HeaderActions({ className, onNavigate }: { className?: string; onNavigate?: () => void }) {
+  return (
+    <div className={cn("header-actions", className)}>
+      <button
+        type="button"
+        disabled
+        title="Member sign-in is not connected yet"
+        aria-label="Log in (member sign-in is not available yet)"
+        className="header-action header-action-login"
+      >
+        Log in
+      </button>
+      <a
+        href={siteConfig.telegramUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Become a member on Telegram"
+        onClick={onNavigate}
+        className="header-action header-action-member group"
+      >
+        Become a member
+        <span className="text-brand-orange" aria-hidden="true"><ArrowIcon /></span>
+      </a>
+    </div>
+  );
+}
+
 export function SiteHeader() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -46,12 +74,12 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="border-ink/10 bg-paper/95 sticky top-0 z-50 border-b backdrop-blur-md">
-      <Container className="flex min-h-[4.75rem] items-center justify-between gap-5">
+    <header className={cn("bg-paper/95 sticky top-0 z-50 border-b backdrop-blur-md", isHome ? "border-transparent" : "border-ink/10")}>
+      <Container className={cn("flex min-h-[4.75rem] items-center justify-between gap-5", isHome && "lg:min-h-[6.25rem]")}>
         <BrandLogo />
 
-        <nav aria-label="Primary navigation" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+        <nav aria-label="Primary navigation" className="hidden xl:block">
+          <ul className="flex items-center gap-4 xl:gap-6 2xl:gap-8">
             {primaryNavigation.map((item) => {
               const active =
                 item.href === "/"
@@ -65,8 +93,9 @@ export function SiteHeader() {
                     aria-current={active ? "page" : undefined}
                     onClick={() => setMenuOpen(false)}
                     className={cn(
-                      "hover:bg-peach/65 focus-visible:outline-brand-orange inline-flex min-h-11 items-center rounded-xl px-3 text-sm font-bold transition focus-visible:outline-3 focus-visible:outline-offset-2",
-                      active && "bg-peach text-brand-orange-deep",
+                      "hover:bg-peach/65 focus-visible:outline-brand-orange inline-flex min-h-11 items-center whitespace-nowrap rounded-xl px-2 text-base font-bold transition focus-visible:outline-3 focus-visible:outline-offset-2",
+                      isHome && "font-display rounded-none hover:bg-transparent hover:underline hover:decoration-brand-orange hover:decoration-2 hover:underline-offset-4",
+                      active && (isHome ? "underline decoration-brand-orange decoration-2 underline-offset-4" : "bg-peach text-brand-orange-deep"),
                     )}
                   >
                     {item.label}
@@ -77,20 +106,13 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="hidden lg:block">
-          <LinkButton
-            href={siteConfig.telegramUrl}
-            external
-            aria-label="Join the current reading cycle on Telegram"
-          >
-            Join Current Cycle
-            <ArrowIcon />
-          </LinkButton>
+        <div className="hidden xl:block">
+          <HeaderActions />
         </div>
 
         <button
           type="button"
-          className="border-ink bg-cream focus-visible:outline-brand-orange inline-flex size-11 items-center justify-center rounded-xl border-2 shadow-[2px_2px_0_#111] focus-visible:outline-3 focus-visible:outline-offset-2 lg:hidden"
+          className="border-ink bg-cream focus-visible:outline-brand-orange inline-flex size-11 items-center justify-center rounded-xl border-2 shadow-[2px_2px_0_#111] focus-visible:outline-3 focus-visible:outline-offset-2 xl:hidden"
           aria-label={
             menuOpen ? "Close navigation menu" : "Open navigation menu"
           }
@@ -105,7 +127,7 @@ export function SiteHeader() {
       <div
         id="mobile-navigation"
         className={cn(
-          "border-ink/10 bg-paper border-t lg:hidden",
+          "border-ink/10 bg-paper border-t xl:hidden",
           !menuOpen && "hidden",
         )}
       >
@@ -135,14 +157,7 @@ export function SiteHeader() {
                 );
               })}
             </ul>
-            <LinkButton
-              href={siteConfig.telegramUrl}
-              external
-              className="mt-4 w-full"
-            >
-              Join Current Reading Cycle
-              <ArrowIcon />
-            </LinkButton>
+            <HeaderActions className="header-actions-mobile" onNavigate={() => setMenuOpen(false)} />
           </nav>
         </Container>
       </div>
