@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { BookCard } from "@/components/books/book-card";
-import { BookCoverPlaceholder } from "@/components/cycle/book-cover-placeholder";
-import { ArrowIcon, LinkButton } from "@/components/ui/button";
-import { Chip } from "@/components/ui/chip";
+import { BookShowcase } from "@/components/books/book-showcase";
 import { Container } from "@/components/ui/container";
 import { DecorativeAsset } from "@/components/ui/doodle-decoration";
 import { SectionDivider } from "@/components/ui/section-divider";
@@ -12,7 +10,6 @@ import { NumberBadge } from "@/components/ui/number-badge";
 import { MobileSwipeRail } from "@/components/ui/mobile-swipe-rail";
 import { DecoratedCTASection } from "@/components/ui/decorated-cta-section";
 import { EmptyState } from "@/components/ui/empty-state";
-import { PaperPanel } from "@/components/ui/paper-panel";
 import { Section } from "@/components/ui/section";
 import { SectionHeader } from "@/components/ui/section-header";
 import { assets } from "@/lib/assets";
@@ -20,11 +17,12 @@ import type { MockBook, MockVoice, ReadingCycle } from "@/lib/content-types";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-export type BooksFilter = "all" | "current" | "focus" | "habits" | "purpose";
+export type BooksFilter = "all" | "current" | "completed" | "focus" | "habits" | "purpose";
 
 const filters: readonly { value: BooksFilter; label: string }[] = [
   { value: "all", label: "All books" },
   { value: "current", label: "Current cycle" },
+  { value: "completed", label: "Completed" },
   { value: "focus", label: "Focus" },
   { value: "habits", label: "Habits" },
   { value: "purpose", label: "Purpose" },
@@ -49,6 +47,7 @@ const readingPath = [
 function matchesFilter(book: MockBook, filter: BooksFilter) {
   if (filter === "all") return true;
   if (filter === "current") return book.status === "current";
+  if (filter === "completed") return book.status === "completed-cycle";
   return book.themes.some((theme) => theme.toLowerCase() === filter);
 }
 
@@ -73,102 +72,23 @@ export function BooksListingPage({
 
   return (
     <>
-      <Section className="relative overflow-hidden pt-10 sm:pt-14">
-        <Container className="grid items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
-          <div className="relative z-10">
+      <Section className="books-discovery-hero relative overflow-hidden pt-10 sm:pt-14">
+        <Container>
+          <div className="relative z-10 mx-auto max-w-4xl text-center">
             <p className="font-note text-brand-orange-deep text-2xl sm:text-3xl">
               Books that move through the circle.
             </p>
-            <h1 className="font-display mt-3 text-[clamp(3.6rem,8vw,7rem)] leading-[0.9] font-semibold tracking-[-0.055em] text-balance">
+            <h1 className="books-discovery-heading font-display mt-3 font-semibold tracking-[-0.045em] text-balance">
               Explore books that{" "}
               <span className="text-brand-orange-deep">inspire change.</span>
             </h1>
-            <p className="text-ink/70 mt-6 max-w-2xl text-lg leading-8">
+            <p className="text-ink/70 mx-auto mt-6 max-w-2xl text-base leading-8 sm:text-lg">
               Discover the books behind our reading cycles, reflections, and
               conversations—then follow the idea that feels worth carrying.
             </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xl">
-            <DecorativeAsset
-              src={assets.books.arrowPair}
-              width={210}
-              height={118}
-              className="absolute top-5 -left-10 hidden w-28 -rotate-12 opacity-65 md:block"
-            />
-            <Image
-              src={assets.illustrations.bookStackGrowth}
-              alt="A growing plant rising from a stack of books"
-              width={1024}
-              height={912}
-              className="w-full"
-              loading="eager"
-              priority
-            />
-            <Image
-              src={assets.books.sparks}
-              alt=""
-              width={178}
-              height={88}
-              className="pointer-events-none absolute top-8 -right-5 hidden w-24 sm:block"
-            />
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="bg-cream py-10 sm:py-14">
-        <Container>
-          <PaperPanel
-            surface="paper"
-            className="paper-grain relative overflow-hidden p-6 sm:p-9 lg:p-11"
-          >
-            <Image
-              src={assets.books.bookmarkOrange}
-              alt=""
-              width={89}
-              height={136}
-              className="pointer-events-none absolute top-0 right-8 hidden w-14 sm:block"
-            />
-            <DecorativeAsset
-              src={assets.stickers.tapeOrange}
-              width={116}
-              height={52}
-              className="absolute top-6 left-8 hidden w-20 -rotate-6 opacity-80 sm:block"
-            />
-            <div className="grid items-center gap-9 lg:grid-cols-[0.55fr_1.45fr]">
-              <BookCoverPlaceholder book={currentBook} className="max-w-56" />
-              <div>
-                <div className="flex flex-wrap gap-2">
-                  <Chip tone="success">{currentBook.statusLabel}</Chip>
-                  {currentBook.themes.map((theme) => (
-                    <Chip key={theme}>{theme}</Chip>
-                  ))}
-                </div>
-                <p className="font-note text-brand-orange-deep mt-5 text-2xl">
-                  The book in the circle now
-                </p>
-                <h2 className="font-display mt-2 text-5xl leading-none font-semibold tracking-tight sm:text-6xl">
-                  {currentBook.title}
-                </h2>
-                <p className="text-ink/60 mt-2">by {currentBook.author}</p>
-                <p className="text-ink/72 mt-5 max-w-3xl leading-8">
-                  {currentBook.description}
-                </p>
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <LinkButton href={`/cycles/${currentCycle.slug}`} size="lg">
-                    View Current Cycle <ArrowIcon />
-                  </LinkButton>
-                  <LinkButton
-                    href={`/books/${currentBook.slug}`}
-                    variant="secondary"
-                    size="lg"
-                  >
-                    Explore This Book
-                  </LinkButton>
-                </div>
-              </div>
-            </div>
-          </PaperPanel>
+          <BookShowcase books={books} currentBook={currentBook} cycleSlug={currentCycle.slug} />
         </Container>
       </Section>
 

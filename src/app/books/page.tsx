@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 const validFilters = new Set<BooksFilter>([
   "all",
   "current",
+  "completed",
   "focus",
   "habits",
   "purpose",
