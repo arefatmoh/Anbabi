@@ -103,7 +103,7 @@ export async function getHomeContent(): Promise<HomeContent> {
 export async function getCurrentCycleContent(): Promise<CurrentCycleContent> {
   return {
     currentCycle: mockCurrentCycle,
-    relatedVoices: mockVoices,
+    relatedVoices: mockVoices.filter((voice) => voice.relatedBookSlug === mockCurrentCycle.book.slug),
   };
 }
 

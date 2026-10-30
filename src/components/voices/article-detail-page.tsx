@@ -14,7 +14,7 @@ import { ReactionBar } from "@/components/ui/reaction-bar";
 import { ReadAloudControls } from "@/components/ui/read-aloud-controls";
 import { Section } from "@/components/ui/section";
 import { assets } from "@/lib/assets";
-import type { MockVoice, ReadingCycle } from "@/lib/content-types";
+import type { MockBook, MockVoice, ReadingCycle } from "@/lib/content-types";
 import { siteConfig } from "@/lib/site";
 
 const coverAssets = {
@@ -94,10 +94,12 @@ function ShareActions({ article }: { article: MockVoice }) {
 export function ArticleDetailPage({
   article,
   currentCycle,
+  relatedBook,
   relatedVoices,
 }: {
   article: MockVoice;
   currentCycle: ReadingCycle;
+  relatedBook: MockBook | null;
   relatedVoices: readonly MockVoice[];
 }) {
   const articleReadAloudText = article.sections
@@ -270,26 +272,26 @@ export function ArticleDetailPage({
                   <p className="font-note text-brand-orange-deep text-2xl">
                     Related reading
                   </p>
-                  <div className="mt-5">
+                  {relatedBook ? <div className="mt-5">
                     <BookCoverPlaceholder
-                      book={currentCycle.book}
+                      book={relatedBook}
                       className="max-w-40"
                     />
-                  </div>
+                  </div> : null}
                   <h2 className="font-display mt-7 text-2xl font-semibold">
-                    {currentCycle.book.title}
+                    {article.relatedBook}
                   </h2>
                   <p className="text-ink/65 mt-2 text-sm leading-6">
-                    This voice grew from the current reading circle.
+                    Explore the book that inspired this reflection.
                   </p>
                   <div className="mt-5 grid gap-3">
-                    <LinkButton
+                    {article.relatedBookSlug === currentCycle.book.slug ? <LinkButton
                       href={`/cycles/${currentCycle.slug}`}
                       variant="secondary"
                       className="w-full"
                     >
                       View the cycle
-                    </LinkButton>
+                    </LinkButton> : null}
                     <LinkButton
                       href={`/books/${article.relatedBookSlug}`}
                       variant="ghost"

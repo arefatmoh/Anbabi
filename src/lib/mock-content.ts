@@ -14,6 +14,7 @@ import type {
   PolicyPageContent,
   ReadingCycle,
 } from "@/lib/content-types";
+import { readingCircleBooks } from "@/lib/reading-circle-books";
 
 export const homeImpactStats: readonly HomeImpactStat[] = [
   { value: 50, suffix: "+", label: "members" },
@@ -52,6 +53,7 @@ export const homePrograms: readonly HomeProgram[] = [
   },
 ];
 export const mockBooks: readonly MockBook[] = [
+  ...readingCircleBooks,
   {
     isMock: true,
     slug: "deep-work",
@@ -70,10 +72,10 @@ export const mockBooks: readonly MockBook[] = [
       "Deep Work examines the value of sustained, distraction-free concentration and the routines that make it possible. It gives readers a useful language for noticing shallow habits, protecting attention, and making room for demanding work that matters.",
     themes: ["Focus", "Attention", "Digital discipline"],
     category: "Productivity",
-    status: "current",
-    statusLabel: "Current cycle",
+    status: "recommended",
+    statusLabel: "Recommended",
     language: "English",
-    readingTime: "Four-week reading rhythm",
+    readingTime: "Read at your own rhythm",
     whyFeatured:
       "The book gives the circle a practical question to test together: what becomes possible when we protect our attention? Its ideas move naturally from private reading into shared experiments and reflection.",
     readerFit: [
@@ -122,104 +124,32 @@ export const mockBooks: readonly MockBook[] = [
       "Which identity are your current routines reinforcing?",
     ],
   },
-  {
-    isMock: true,
-    slug: "the-alchemist",
-    title: "The Alchemist",
-    author: "Paulo Coelho",
-    coverLabel: "Story & Purpose",
-    coverTone: "orange",
-    coverImage: {
-      src: "https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg",
-      alt: "The Alchemist by Paulo Coelho book cover",
-      sourceLabel: "Open Library cover",
-    },
-    description:
-      "A fable about purpose, uncertainty, and learning to notice what the journey is teaching.",
-    longDescription:
-      "The Alchemist follows a young shepherd whose search for treasure becomes a larger meditation on courage, desire, signs, and the meaning we make from a journey. Its accessible form opens space for different readers to question what purpose and risk look like in their own lives.",
-    themes: ["Purpose", "Courage", "Journey"],
-    category: "Fiction",
-    status: "recommended",
-    statusLabel: "Recommended",
-    language: "English",
-    readingTime: "Short reflective read",
-    whyFeatured:
-      "The story is approachable while leaving room for disagreement and interpretation. It gives a circle many entry points: ambition, fear, faith, choice, and what it means to listen carefully.",
-    readerFit: [
-      "Readers returning to fiction",
-      "People drawn to reflective stories",
-      "Anyone thinking about purpose and uncertainty",
-    ],
-    discussionPrompts: [
-      "When does persistence become wisdom—and when does it become stubbornness?",
-      "Which part of a journey changes us most: leaving, searching, or returning?",
-      "What does the story suggest about listening to fear?",
-    ],
-  },
 ];
 export const mockCurrentCycle: ReadingCycle = {
   isMock: true,
-  slug: "deep-work-reading-circle",
+  slug: "animal-farm-reading-circle",
   status: "active",
   statusLabel: "Current cycle",
-  title: "Deep Work Reading Circle",
+  title: "Animal Farm Reading Circle",
   shortDescription:
-    "Read Cal Newport’s Deep Work with a steady weekly rhythm, practical reflection prompts, and a circle that turns focused reading into focused action.",
+    "Read George Orwell’s Animal Farm together and explore its questions about power, language, and the promises a community makes.",
   book: mockBooks[0],
 
-  dateLabel: "Four-week reading cycle",
-  durationLabel: "One focused theme each week",
-  targetLabel: "Read daily · reflect weekly",
+  dateLabel: "Current reading cycle",
+  durationLabel: "Read and reflect together",
+  targetLabel: "Bring a question to the circle",
   whySelected:
-    "Deep Work gives the circle a practical question: what becomes possible when we protect our attention? Its ideas invite readers to examine distraction, build stronger routines, and test focused practice in everyday study and work.",
+    "Animal Farm gives the circle a story to explore together: how do power, language, and leadership shape a community’s shared ideals?",
   readerFit: [
-    "Readers rebuilding a steady reading habit",
-    "Students and young professionals protecting their attention",
-    "Curious people ready to test ideas beyond the page",
+    "Readers who enjoy stories with deeper questions",
+    "Anyone interested in leadership and fairness",
+    "Curious people ready to discuss ideas with others",
   ],
-  schedule: [
-    {
-      id: "the-idea",
-      label: "Week 1",
-      title: "The Idea of Deep Work",
-      readingTarget:
-        "Explore why focused work is valuable, rare, and meaningful.",
-      prompt: "Where does your best attention currently go?",
-      state: "completed",
-    },
-    {
-      id: "work-deeply",
-      label: "Week 2",
-      title: "Work Deeply",
-      readingTarget:
-        "Read the first rule and design one realistic focus ritual.",
-      prompt: "What boundary would make focused work easier this week?",
-      state: "current",
-    },
-    {
-      id: "embrace-boredom",
-      label: "Week 3",
-      title: "Train Your Attention",
-      readingTarget:
-        "Explore boredom, distraction, and a more intentional digital life.",
-      prompt: "Which distraction are you willing to interrupt?",
-      state: "upcoming",
-    },
-    {
-      id: "drain-shallows",
-      label: "Week 4",
-      title: "Make Space for Depth",
-      readingTarget:
-        "Finish the rules and shape one practice worth carrying forward.",
-      prompt: "What will you protect after the reading cycle ends?",
-      state: "closing",
-    },
-  ],
+  schedule: [],
   prompts: [
-    "What does focused work look like in your current season of life?",
-    "Which environment helps your attention settle—and which one scatters it?",
-    "What is one shallow habit you could redesign instead of simply resisting?",
+    "How do the animals’ original hopes change as power shifts on the farm?",
+    "How does language influence what the animals believe?",
+    "What makes a leader accountable to a community?",
   ],
 };
 
@@ -239,8 +169,8 @@ export const mockVoices: readonly MockVoice[] = [
     tags: ["Focus", "Reading Practice", "Attention"],
     publishedLabel: "May 18",
     readingTime: "4 min read",
-    relatedBook: mockCurrentCycle.book.title,
-    relatedBookSlug: mockCurrentCycle.book.slug,
+    relatedBook: "Deep Work",
+    relatedBookSlug: "deep-work",
     featured: true,
     cover: "reader",
     sections: [
@@ -283,8 +213,8 @@ export const mockVoices: readonly MockVoice[] = [
     tags: ["Digital Discipline", "Habits", "Focus"],
     publishedLabel: "May 15",
     readingTime: "3 min read",
-    relatedBook: mockCurrentCycle.book.title,
-    relatedBookSlug: mockCurrentCycle.book.slug,
+    relatedBook: "Deep Work",
+    relatedBookSlug: "deep-work",
     featured: false,
     cover: "notebook",
     sections: [
@@ -327,8 +257,8 @@ export const mockVoices: readonly MockVoice[] = [
     tags: ["Technology", "Attention", "Everyday Practice"],
     publishedLabel: "May 12",
     readingTime: "5 min read",
-    relatedBook: mockCurrentCycle.book.title,
-    relatedBookSlug: mockCurrentCycle.book.slug,
+    relatedBook: "Deep Work",
+    relatedBookSlug: "deep-work",
     featured: false,
     cover: "voices",
     sections: [

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArticleDetailPage } from "@/components/voices/article-detail-page";
 import {
   getCurrentCycleContent,
+  getBookBySlug,
   getVoiceBySlug,
   getVoiceSlugs,
   getVoices,
@@ -53,6 +54,8 @@ export default async function VoiceArticlePage({
 
   if (!article) notFound();
 
+  const relatedBook = await getBookBySlug(article.relatedBookSlug);
+
   const relatedVoices = voices.filter((voice) => voice.slug !== article.slug);
   const structuredData = {
     "@context": "https://schema.org",
@@ -80,6 +83,7 @@ export default async function VoiceArticlePage({
       <ArticleDetailPage
         article={article}
         currentCycle={cycleContent.currentCycle}
+        relatedBook={relatedBook}
         relatedVoices={relatedVoices}
       />
     </>

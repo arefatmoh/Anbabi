@@ -24,9 +24,9 @@ insert into public.books (
     'Productivity',
     array['Focus', 'Attention', 'Digital discipline'],
     'English',
-    'current',
-    'Current cycle',
-    'Four-week reading rhythm',
+    'recommended',
+    'Recommended',
+    'Read at your own rhythm',
     array['Readers rebuilding a steady reading habit', 'Students and young professionals protecting their attention', 'Anyone ready to examine distraction without chasing perfection'],
     array['Where does your best attention currently go?', 'Which shallow habit deserves a thoughtful redesign?', 'What kind of environment helps you stay with a difficult idea?'],
     10,
@@ -57,27 +57,57 @@ insert into public.books (
     false
   ),
   (
-    'the-alchemist',
-    'The Alchemist',
-    'Paulo Coelho',
-    'Story & Purpose',
+    'animal-farm',
+    'Animal Farm',
+    'George Orwell',
+    'Current Reading Cycle',
     'orange',
-    'https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg',
-    'The Alchemist by Paulo Coelho book cover',
-    'A fable about purpose, uncertainty, and learning to notice what the journey is teaching.',
-    'The Alchemist follows a young shepherd whose search for treasure becomes a larger meditation on courage, desire, signs, and the meaning we make from a journey. Its accessible form opens space for different readers to question what purpose and risk look like in their own lives.',
-    'The story is approachable while leaving room for disagreement and interpretation. It gives a circle many entry points: ambition, fear, faith, choice, and what it means to listen carefully.',
+    'https://covers.openlibrary.org/b/isbn/9780141182704-L.jpg',
+    'Animal Farm by George Orwell book cover',
+    'A sharp political fable about power, equality, and the distance between a promise and its practice.',
+    'In George Orwell’s Animal Farm, the animals of Manor Farm rise against their owner in pursuit of a fairer life. Their new society becomes a searching story about power, language, leadership, and how ideals can be changed over time.',
+    'Animal Farm invites readers to examine how leadership is exercised, how language shapes what people believe, and what it takes to hold on to shared principles.',
     'Fiction',
-    array['Purpose', 'Courage', 'Journey'],
+    array['Power', 'Equality', 'Leadership'],
     'English',
-    'recommended',
-    'Recommended',
-    'Short reflective read',
-    array['Readers returning to fiction', 'People drawn to reflective stories', 'Anyone thinking about purpose and uncertainty'],
-    array['When does persistence become wisdom?and when does it become stubbornness?', 'Which part of a journey changes us most: leaving, searching, or returning?', 'What does the story suggest about listening to fear?'],
+    'current',
+    'Current cycle',
+    'Current reading cycle',
+    array['Readers who enjoy stories with deeper questions', 'Anyone interested in leadership and fairness', 'Readers who want to explore how language shapes power'],
+    array['How do the animals’ original hopes change as power shifts on the farm?', 'How does language influence what the animals believe?', 'What makes a leader accountable to a community?'],
     30,
     true,
     false
+  ),
+  (
+    'eat-that-frog', 'Eat That Frog!', 'Brian Tracy', 'Productivity & Focus', 'charcoal',
+    'https://covers.openlibrary.org/b/isbn/9781576754221-L.jpg', 'Eat That Frog! by Brian Tracy book cover',
+    'A practical guide to tackling important work, overcoming procrastination, and making purposeful choices about time.',
+    'Brian Tracy’s Eat That Frog! offers practical approaches to identifying priorities and beginning the tasks that matter most. It invites readers to examine procrastination and make deliberate use of their time.',
+    'Its practical questions about priorities make a useful starting point for reflecting on how we choose and begin meaningful work.',
+    'Personal Growth', array['Focus', 'Priorities', 'Productivity'], 'English', 'completed', 'Completed', 'Completed by the circle',
+    array['Readers working on procrastination', 'People looking for practical ways to set priorities', 'Anyone reflecting on how they use their time'],
+    array['What important task do you tend to put off?', 'How do you decide which work matters most?', 'What helps you begin when a task feels difficult?'], 40, true, false
+  ),
+  (
+    'who-moved-my-cheese', 'Who Moved My Cheese?', 'Spencer Johnson', 'Change & Growth', 'paper',
+    'https://covers.openlibrary.org/b/isbn/9780399144462-L.jpg', 'Who Moved My Cheese? by Spencer Johnson book cover',
+    'A simple story about change, uncertainty, and how we respond when familiar paths shift.',
+    'Spencer Johnson’s Who Moved My Cheese? follows four characters through a maze as they respond differently to change. The story opens a conversation about habits, uncertainty, and adapting when circumstances shift.',
+    'The story gives readers a shared language for discussing change and the choices we make when a familiar situation no longer serves us.',
+    'Personal Growth', array['Change', 'Adaptability', 'Growth'], 'English', 'completed', 'Completed', 'Completed by the circle',
+    array['Readers navigating change', 'People who enjoy short, discussion-friendly stories', 'Anyone curious about adaptability'],
+    array['How do you usually respond when something familiar changes?', 'Which character’s response feels most recognizable to you?', 'What can make a new direction easier to explore?'], 50, true, false
+  ),
+  (
+    'the-productive-muslim', 'The Productive Muslim', 'Mohammed Faris', 'Faith & Purpose', 'charcoal',
+    'https://covers.openlibrary.org/b/isbn/9781905837380-L.jpg', 'The Productive Muslim: Where Faith Meets Productivity by Mohammed Faris book cover',
+    'Where Faith Meets Productivity explores the relationship between faith, purposeful habits, and everyday life.',
+    'In The Productive Muslim: Where Faith Meets Productivity, Mohammed Faris brings together reflections on faith and practical approaches to living and working with purpose. The book considers spiritual, physical, and social dimensions of productivity.',
+    'The book opens space to consider how intention, faith, and everyday practices can shape a meaningful approach to work and life.',
+    'Faith & Growth', array['Faith', 'Purpose', 'Productivity'], 'English', 'completed', 'Completed', 'Completed by the circle',
+    array['Readers exploring faith and purposeful living', 'People reflecting on their daily routines', 'Anyone interested in a balanced approach to productivity'],
+    array['What does a purposeful day look like to you?', 'How can intention change the way you approach an ordinary task?', 'Which daily practice helps you make space for what matters?'], 60, true, false
   )
 on conflict (slug) do update set
   title = excluded.title,
@@ -101,22 +131,26 @@ on conflict (slug) do update set
   is_mock = excluded.is_mock,
   approved_for_production = excluded.approved_for_production;
 
+-- Retire only the old unapproved development cycle from the featured slot.
+update public.reading_cycles set featured = false
+where slug = 'deep-work-reading-circle' and is_mock = true and approved_for_production = false;
+
 insert into public.reading_cycles (
   book_id, slug, title, short_description, date_label, duration_label,
   target_label, daily_target, why_selected, reader_fit, prompts,
   telegram_link, status, status_label, featured, is_mock, approved_for_production
 ) values (
-  (select id from public.books where slug = 'deep-work'),
-  'deep-work-reading-circle',
-  'Deep Work Reading Circle',
-  'Read Cal Newport?s Deep Work with a steady weekly rhythm, practical reflection prompts, and a circle that turns focused reading into focused action.',
-  'Four-week reading cycle',
-  'One focused theme each week',
-  'Read daily ? reflect weekly',
-  'Read daily ? reflect weekly',
-  'Deep Work gives the circle a practical question: what becomes possible when we protect our attention? Its ideas invite readers to examine distraction, build stronger routines, and test focused practice in everyday study and work.',
-  array['Readers rebuilding a steady reading habit', 'Students and young professionals protecting their attention', 'Curious people ready to test ideas beyond the page'],
-  array['What does focused work look like in your current season of life?', 'Which environment helps your attention settle?and which one scatters it?', 'What is one shallow habit you could redesign instead of simply resisting?'],
+  (select id from public.books where slug = 'animal-farm'),
+  'animal-farm-reading-circle',
+  'Animal Farm Reading Circle',
+  'Read George Orwell’s Animal Farm together and explore its questions about power, language, and the promises a community makes.',
+  'Current reading cycle',
+  'Read and reflect together',
+  'Bring a question to the circle',
+  'Bring a question to the circle',
+  'Animal Farm gives the circle a story to explore together: how do power, language, and leadership shape a community’s shared ideals?',
+  array['Readers who enjoy stories with deeper questions', 'Anyone interested in leadership and fairness', 'Curious people ready to discuss ideas with others'],
+  array['How do the animals’ original hopes change as power shifts on the farm?', 'How does language influence what the animals believe?', 'What makes a leader accountable to a community?'],
   'https://t.me/ReadRevive',
   'active',
   'Current cycle',
@@ -141,18 +175,6 @@ on conflict (slug) do update set
   featured = excluded.featured,
   is_mock = excluded.is_mock,
   approved_for_production = excluded.approved_for_production;
-
-delete from public.cycle_schedule
-where cycle_id = (select id from public.reading_cycles where slug = 'deep-work-reading-circle');
-
-insert into public.cycle_schedule (
-  cycle_id, label, title, reading_target, prompt, week_number, display_state,
-  sort_order, is_mock
-) values
-  ((select id from public.reading_cycles where slug = 'deep-work-reading-circle'), 'Week 1', 'The Idea of Deep Work', 'Explore why focused work is valuable, rare, and meaningful.', 'Where does your best attention currently go?', 1, 'completed', 10, true),
-  ((select id from public.reading_cycles where slug = 'deep-work-reading-circle'), 'Week 2', 'Work Deeply', 'Read the first rule and design one realistic focus ritual.', 'What boundary would make focused work easier this week?', 2, 'current', 20, true),
-  ((select id from public.reading_cycles where slug = 'deep-work-reading-circle'), 'Week 3', 'Train Your Attention', 'Explore boredom, distraction, and a more intentional digital life.', 'Which distraction are you willing to interrupt?', 3, 'upcoming', 30, true),
-  ((select id from public.reading_cycles where slug = 'deep-work-reading-circle'), 'Week 4', 'Make Space for Depth', 'Finish the rules and shape one practice worth carrying forward.', 'What will you protect after the reading cycle ends?', 4, 'closing', 40, true);
 
 insert into public.blog_categories (slug, name, sort_order, active, is_mock) values
   ('reflection', 'Reflection', 10, true, true),
@@ -316,7 +338,7 @@ on conflict do nothing;
 insert into public.site_settings (key, value, description, public_read, is_mock, approved_for_production)
 values (
   'homepage_featured_content',
-  '{"currentCycleSlug":"deep-work-reading-circle","featuredVoiceSlugs":["what-deep-work-changed-about-my-evenings","boredom-is-not-the-enemy","a-smaller-phone-a-larger-attention-span"]}'::jsonb,
+  '{"currentCycleSlug":"animal-farm-reading-circle","featuredVoiceSlugs":["what-deep-work-changed-about-my-evenings","boredom-is-not-the-enemy","a-smaller-phone-a-larger-attention-span"]}'::jsonb,
   'Homepage featured content selection for the public MVP.',
   true,
   true,

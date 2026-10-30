@@ -42,5 +42,5 @@ export default async function CyclePage({
 
   if (!cycle) notFound();
 
-  return <CycleDetailPage cycle={cycle} voices={voices} />;
+  return <CycleDetailPage cycle={cycle} voices={voices.filter((voice) => voice.relatedBookSlug === cycle.book.slug)} />;
 }

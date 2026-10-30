@@ -34,9 +34,7 @@ export function CycleDetailPage({ cycle, voices }: CycleDetailPageProps) {
               A reading mission with room to think.
             </h1>
             <p className="text-ink/65 mt-5 leading-8">
-              Deep Work asks what becomes possible when we protect our
-              attention. This cycle turns that question into four weeks of
-              reading, reflection, and focused practice.
+              {cycle.shortDescription}
             </p>
           </div>
           <CurrentCycleHero cycle={cycle} />
@@ -83,7 +81,7 @@ export function CycleDetailPage({ cycle, voices }: CycleDetailPageProps) {
         </Container>
       </Section>
 
-      <Section>
+      {cycle.schedule.length > 0 ? <Section>
         <Container>
           <SectionHeader
             eyebrow="Reading schedule"
@@ -94,7 +92,7 @@ export function CycleDetailPage({ cycle, voices }: CycleDetailPageProps) {
             <ReadingTimeline steps={cycle.schedule} />
           </div>
         </Container>
-      </Section>
+      </Section> : null}
 
       <Section className="bg-cream">
         <Container className="grid items-start gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -198,7 +196,7 @@ export function CycleDetailPage({ cycle, voices }: CycleDetailPageProps) {
         accent="cycle"
         eyebrow="Discussion platform"
         title="Continue the conversation on Telegram."
-        description="Follow the weekly reading rhythm, respond to prompts, and bring your own questions into the group discussion."
+        description="Follow the reading conversation, respond to prompts, and bring your own questions into the group discussion."
         action={{
           label: "Join on Telegram",
           href: siteConfig.telegramUrl,
@@ -206,12 +204,12 @@ export function CycleDetailPage({ cycle, voices }: CycleDetailPageProps) {
         }}
       />
 
-      <Section className="bg-cream">
+      {voices.length > 0 ? <Section className="bg-cream">
         <Container>
           <SectionHeader
             eyebrow="Voices from the Circle"
             title="The reading continues in words of your own."
-            description="Three reflections that carry the Deep Work ideas into attention, habit, and everyday digital life."
+            description={`Reflections and questions inspired by ${cycle.book.title}.`}
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {voices.map((voice) => (
@@ -219,7 +217,7 @@ export function CycleDetailPage({ cycle, voices }: CycleDetailPageProps) {
             ))}
           </div>
         </Container>
-      </Section>
+      </Section> : null}
 
       <MobileJoinBar href={siteConfig.telegramUrl} />
     </>

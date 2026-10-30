@@ -91,7 +91,7 @@ export function VoicesListingPage({
           <SectionHeader
             eyebrow="Featured reflection"
             title="One voice can reopen a familiar idea."
-            description="Start with a reflection from the current reading circle, then follow the questions it leaves behind."
+            description="Start with a reflection from the circle, then follow the questions it leaves behind."
           />
           <div className="mt-10">
             <VoiceCard voice={featured} featured />
@@ -127,7 +127,7 @@ export function VoicesListingPage({
 
       <DecoratedCTASection
         accent="voices"
-        eyebrow="The book behind these voices"
+        eyebrow="The current reading circle"
         title={`${currentCycle.book.title} is still moving through the circle.`}
         description="Join the current cycle, follow the reading rhythm, and bring your own question into the conversation."
         action={{

@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const metadata = [
-  { key: "dateLabel", label: "Dates", icon: assets.icons.calendar },
+  { key: "dateLabel", label: "Cycle", icon: assets.icons.calendar },
   { key: "durationLabel", label: "Rhythm", icon: assets.icons.discussion },
   { key: "targetLabel", label: "Target", icon: assets.icons.notebook },
 ] as const;
