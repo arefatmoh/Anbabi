@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - name: Smoke-test the production server
+        run: |
+          set -e
+          node node_modules/next/dist/bin/next start --hostname 127.0.0.1 > "$RUNNER_TEMP/anbabi.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          if ! npm run test:smoke; then
+            cat "$RUNNER_TEMP/anbabi.log"
+            exit 1
+          fi
