@@ -131,6 +131,57 @@ on conflict (slug) do update set
   is_mock = excluded.is_mock,
   approved_for_production = excluded.approved_for_production;
 
+-- Upcoming titles pictured on the reading shelf. These remain unapproved development records.
+insert into public.books (
+  slug, title, author, cover_label, cover_tone, cover_url, cover_alt, description, long_description,
+  why_featured, category, themes, language, status, status_label, reading_time_label,
+  reader_fit, discussion_prompts, sort_order, is_mock, approved_for_production
+) values
+  ('the-daily-stoic', 'The Daily Stoic', 'Ryan Holiday and Stephen Hanselman', 'On the reading shelf', 'charcoal',
+   'https://covers.openlibrary.org/b/isbn/9780735211735-L.jpg', 'The Daily Stoic by Ryan Holiday and Stephen Hanselman book cover',
+   'Daily reflections on Stoic philosophy and the practice of living thoughtfully.', 'Daily reflections on Stoic philosophy and the practice of living thoughtfully.',
+   'The book offers a starting point for reading, reflection, and conversation.', 'Personal Growth', array['Philosophy','Reflection'], 'English', 'upcoming', 'Upcoming read', 'On the reading shelf',
+   array['Readers curious about this subject', 'Anyone who enjoys sharing ideas from a book'], array['Which idea helps you meet an ordinary day with more intention?'], 70, true, false),
+  ('the-courage-to-be-disliked', 'The Courage to Be Disliked', 'Ichiro Kishimi and Fumitake Koga', 'On the reading shelf', 'paper',
+   'https://covers.openlibrary.org/b/isbn/9781501197277-L.jpg', 'The Courage to Be Disliked by Ichiro Kishimi and Fumitake Koga book cover',
+   'A conversation about Adlerian psychology, freedom, and the choices that shape a life.', 'A conversation about Adlerian psychology, freedom, and the choices that shape a life.',
+   'The book offers a starting point for reading, reflection, and conversation.', 'Personal Growth', array['Psychology','Courage'], 'English', 'upcoming', 'Upcoming read', 'On the reading shelf',
+   array['Readers curious about this subject', 'Anyone who enjoys sharing ideas from a book'], array['What does the book ask you to reconsider about freedom and belonging?'], 80, true, false),
+  ('the-art-of-thinking-clearly', 'The Art of Thinking Clearly', 'Rolf Dobelli', 'On the reading shelf', 'paper',
+   'https://covers.openlibrary.org/b/isbn/9781444759563-L.jpg', 'The Art of Thinking Clearly by Rolf Dobelli book cover',
+   'An exploration of common thinking errors and the choices they can influence.', 'An exploration of common thinking errors and the choices they can influence.',
+   'The book offers a starting point for reading, reflection, and conversation.', 'Personal Growth', array['Thinking','Decisions'], 'English', 'upcoming', 'Upcoming read', 'On the reading shelf',
+   array['Readers curious about this subject', 'Anyone who enjoys sharing ideas from a book'], array['Which thinking habit would you like to notice more carefully?'], 90, true, false),
+  ('dopamine-nation', 'Dopamine Nation', 'Anna Lembke', 'On the reading shelf', 'orange',
+   'https://covers.openlibrary.org/b/isbn/9781524746728-L.jpg', 'Dopamine Nation by Anna Lembke book cover',
+   'A look at pleasure, habit, and the search for balance in an age of easy access.', 'A look at pleasure, habit, and the search for balance in an age of easy access.',
+   'The book offers a starting point for reading, reflection, and conversation.', 'Personal Growth', array['Habits','Balance'], 'English', 'upcoming', 'Upcoming read', 'On the reading shelf',
+   array['Readers curious about this subject', 'Anyone who enjoys sharing ideas from a book'], array['What helps you find balance in your everyday habits?'], 100, true, false),
+  ('digital-minimalism', 'Digital Minimalism', 'Cal Newport', 'On the reading shelf', 'charcoal',
+   'https://covers.openlibrary.org/b/isbn/9780525536512-L.jpg', 'Digital Minimalism by Cal Newport book cover',
+   'A thoughtful approach to choosing how technology fits into the life you value.', 'A thoughtful approach to choosing how technology fits into the life you value.',
+   'The book offers a starting point for reading, reflection, and conversation.', 'Productivity', array['Technology','Focus','Productivity'], 'English', 'upcoming', 'Upcoming read', 'On the reading shelf',
+   array['Readers curious about this subject', 'Anyone who enjoys sharing ideas from a book'], array['Which digital tools support what matters most to you?'], 110, true, false),
+  ('the-psychology-of-money', 'The Psychology of Money', 'Morgan Housel', 'On the reading shelf', 'paper',
+   'https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg', 'The Psychology of Money by Morgan Housel book cover',
+   'Stories about the human choices, habits, and experiences that shape our relationship with money.', 'Stories about the human choices, habits, and experiences that shape our relationship with money.',
+   'The book offers a starting point for reading, reflection, and conversation.', 'Personal Growth', array['Money','Decisions'], 'English', 'upcoming', 'Upcoming read', 'On the reading shelf',
+   array['Readers curious about this subject', 'Anyone who enjoys sharing ideas from a book'], array['How have your experiences shaped the way you think about money?'], 120, true, false),
+  ('essentialism', 'Essentialism', 'Greg McKeown', 'On the reading shelf', 'orange',
+   'https://covers.openlibrary.org/b/isbn/9780804137386-L.jpg', 'Essentialism by Greg McKeown book cover',
+   'An invitation to identify what matters most and make space for it with greater intention.', 'An invitation to identify what matters most and make space for it with greater intention.',
+   'The book offers a starting point for reading, reflection, and conversation.', 'Productivity', array['Focus','Priorities','Productivity'], 'English', 'upcoming', 'Upcoming read', 'On the reading shelf',
+   array['Readers curious about this subject', 'Anyone who enjoys sharing ideas from a book'], array['What deserves more of your time, and what could you let go?'], 130, true, false)
+on conflict (slug) do update set
+  title = excluded.title, author = excluded.author, cover_label = excluded.cover_label,
+  cover_tone = excluded.cover_tone, cover_url = excluded.cover_url, cover_alt = excluded.cover_alt,
+  description = excluded.description, long_description = excluded.long_description,
+  why_featured = excluded.why_featured, category = excluded.category, themes = excluded.themes,
+  language = excluded.language, status = excluded.status, status_label = excluded.status_label,
+  reading_time_label = excluded.reading_time_label, reader_fit = excluded.reader_fit,
+  discussion_prompts = excluded.discussion_prompts, sort_order = excluded.sort_order
+where public.books.is_mock = true and public.books.approved_for_production = false;
+
 -- Retire only the old unapproved development cycle from the featured slot.
 update public.reading_cycles set featured = false
 where slug = 'deep-work-reading-circle' and is_mock = true and approved_for_production = false;

@@ -15,6 +15,7 @@ import type {
   ReadingCycle,
 } from "@/lib/content-types";
 import { readingCircleBooks } from "@/lib/reading-circle-books";
+import { upcomingBooks } from "@/lib/upcoming-books";
 
 export const homeImpactStats: readonly HomeImpactStat[] = [
   { value: 50, suffix: "+", label: "members" },
@@ -124,6 +125,7 @@ export const mockBooks: readonly MockBook[] = [
       "Which identity are your current routines reinforcing?",
     ],
   },
+  ...upcomingBooks,
 ];
 export const mockCurrentCycle: ReadingCycle = {
   isMock: true,

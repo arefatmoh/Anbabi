@@ -8786,5 +8786,31 @@
     "source": "Backgrounds and Textures source batch",
     "intendedUsage": "backgrounds and editorial paper overlays",
     "approvalStatus": "accepted"
+  },
+  {
+    "name": "sunlit-plaster-books",
+    "path": "/assets/textures/sunlit-plaster-books.webp",
+    "category": "textures",
+    "subcategory": null,
+    "format": "webp",
+    "width": 1586,
+    "height": 992,
+    "hasAlpha": false,
+    "source": "AI-generated sunlit plaster texture based on the supplied Books page reference",
+    "intendedUsage": "subtle sunlit background for the Books page",
+    "approvalStatus": "accepted"
+  },
+  {
+    "name": "oak-grain-bookshelf",
+    "path": "/assets/textures/oak-grain-bookshelf.webp",
+    "category": "textures",
+    "subcategory": null,
+    "format": "webp",
+    "width": 1400,
+    "height": 700,
+    "hasAlpha": false,
+    "source": "AI-generated honey oak grain texture",
+    "intendedUsage": "surface texture for the coded Books page shelf",
+    "approvalStatus": "accepted"
   }
 ]

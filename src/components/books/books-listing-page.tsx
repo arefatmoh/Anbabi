@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 
 import { BookCard } from "@/components/books/book-card";
 import { BookShowcase } from "@/components/books/book-showcase";
@@ -72,7 +73,7 @@ export function BooksListingPage({
 
   return (
     <>
-      <Section className="books-discovery-hero relative overflow-hidden pt-10 sm:pt-14">
+      <Section className="books-discovery-hero relative overflow-hidden pt-10 sm:pt-14" style={{ "--books-wall": `url(${assets.textures.sunlitBooksWall})` } as CSSProperties}>
         <Container>
           <div className="relative z-10 mx-auto max-w-4xl text-center">
             <p className="font-note text-brand-orange-deep text-2xl sm:text-3xl">
@@ -82,10 +83,6 @@ export function BooksListingPage({
               Explore books that{" "}
               <span className="text-brand-orange-deep">inspire change.</span>
             </h1>
-            <p className="text-ink/70 mx-auto mt-6 max-w-2xl text-base leading-8 sm:text-lg">
-              Discover the books behind our reading cycles, reflections, and
-              conversations—then follow the idea that feels worth carrying.
-            </p>
           </div>
 
           <BookShowcase books={books} currentBook={currentBook} cycleSlug={currentCycle.slug} />

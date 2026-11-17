@@ -4,7 +4,7 @@ export type CycleStatus =
 export type TimelineState =
   "completed" | "current" | "upcoming" | "missed" | "closing";
 
-export type BookStatus = "current" | "completed-cycle" | "recommended";
+export type BookStatus = "current" | "completed-cycle" | "recommended" | "upcoming";
 export type BookCoverTone = "charcoal" | "orange" | "paper";
 
 export type BookCoverImage = {

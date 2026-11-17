@@ -80,6 +80,8 @@ export const assets = {
   },
   textures: {
     warmPaper: "/assets/textures/warm-paper.webp",
+    sunlitBooksWall: "/assets/textures/sunlit-plaster-books.webp",
+    oakBookshelf: "/assets/textures/oak-grain-bookshelf.webp",
   },
   numberBadges: {
     circle: "/assets/doodles/circle-orange-01.png",
