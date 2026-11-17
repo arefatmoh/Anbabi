@@ -201,7 +201,7 @@
 
 ## Launch gate
 
-- [ ] Domain and HTTPS active.
+- [x] Domain and HTTPS active (`www.anbabi.org`; apex redirects to `www`).
 - [ ] Production Supabase project and policies verified.
 - [ ] Production admin account secured.
 - [ ] Real content loaded and proofread.

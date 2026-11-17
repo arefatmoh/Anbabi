@@ -33,11 +33,11 @@ def main() -> None:
 
         alpha = np.array(image.getchannel("A"))
         rgb = np.array(image)[:, :, :3]
-        is_full_background = record["name"] == "warm-paper"
+        is_full_background = record["category"] == "textures" and not record["hasAlpha"]
         if not is_full_background:
             corners = [alpha[0, 0], alpha[0, -1], alpha[-1, 0], alpha[-1, -1]]
             if any(value > 8 for value in corners):
-                errors.append({"path": record["path"], "issue": f"non-transparent corner: {corners}"})
+                errors.append({"path": record["path"], "issue": f"non-transparent corner: {list(map(int, corners))}"})
             border = np.concatenate((alpha[0], alpha[-1], alpha[:, 0], alpha[:, -1]))
             if np.any(border > 32):
                 warnings.append({"path": record["path"], "issue": "visible pixels touch crop edge"})

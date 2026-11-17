@@ -15,6 +15,7 @@ Thumbs.db
 tmp/
 assets-source/archive/
 assets-source/generated-sheets/
+assets-source/validation-report.json
 
 # Python caches from asset tooling
 __pycache__/

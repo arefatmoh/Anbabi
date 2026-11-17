@@ -1,5 +1,6 @@
 ﻿from __future__ import annotations
 
+import argparse
 import json
 import re
 import shutil
@@ -11,7 +12,7 @@ from PIL import Image, ImageFilter
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = Path(r"C:\Users\arefa\Downloads\anbabi assets")
+SOURCE: Path
 PUBLIC = ROOT / "public" / "assets"
 ASSET_SOURCE = ROOT / "assets-source"
 ARCHIVE = ASSET_SOURCE / "archive" / "originals"
@@ -290,6 +291,12 @@ def create_brand_placeholder() -> None:
 
 
 def main() -> None:
+    global SOURCE
+    parser = argparse.ArgumentParser(description="Extract Anbabi artwork from the original source bundle.")
+    parser.add_argument("source", type=Path, help="Path to the original asset bundle")
+    SOURCE = parser.parse_args().source.resolve()
+    if not SOURCE.is_dir():
+        parser.error("source must be an existing directory")
     copy_originals()
     create_references()
     preserve_existing_doodles()

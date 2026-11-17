@@ -65,7 +65,7 @@ Its central product is the **Reading Cycle**:
 ## Confirmed current inputs
 
 - Telegram community URL: `https://t.me/ReadRevive`
-- Domain: not selected yet; use environment-based site URL and a localhost fallback
+- Production domain: `https://www.anbabi.org`; `anbabi.org` redirects to it. Use the environment-based override for alternate origins.
 - Real production content is not yet supplied
 - During development, use coherent mock content that reads naturally in the public UI; do not add visible “sample,” “mock,” “future,” “placeholder,” or “to be replaced” disclaimers
 - Mock content may use recognizable real books and accurate public metadata, such as *Deep Work* by Cal Newport or *Atomic Habits* by James Clear, without implying endorsement or a confirmed production selection
