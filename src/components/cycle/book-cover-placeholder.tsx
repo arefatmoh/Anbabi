@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { BookCoverImage } from "@/components/books/book-cover-image";
 import { assets } from "@/lib/assets";
 import type { MockBook } from "@/lib/content-types";
 import { cn } from "@/lib/utils";
@@ -49,13 +50,18 @@ export function BookCoverPlaceholder({
         )}
       >
         <div className="border-ink shadow-paper absolute inset-0 overflow-hidden rounded-l-md rounded-r-2xl border-2 bg-cream p-2">
-          <Image
+          <BookCoverImage
             src={book.coverImage.src}
             alt={book.coverImage.alt}
-            fill
             sizes="(min-width: 1024px) 18rem, (min-width: 768px) 14rem, 55vw"
             className="object-cover"
-            priority={book.status === "current"}
+            preload={book.status === "current"}
+            fallback={
+              <div className={cn("absolute inset-0 flex flex-col justify-center gap-3 p-5", styles.shell)}>
+                <p className="font-display text-xl leading-tight">{book.title}</p>
+                <p className={cn("text-sm", styles.author)}>{book.author}</p>
+              </div>
+            }
           />
           <div
             aria-hidden="true"

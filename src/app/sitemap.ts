@@ -9,7 +9,6 @@ import { siteConfig } from "@/lib/site";
 
 const staticRoutes = [
   "",
-  "/current-cycle",
   "/books",
   "/voices",
   "/community",

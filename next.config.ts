@@ -6,13 +6,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "covers.openlibrary.org",
-        pathname: "/b/**",
-      },
-    ],
   },
   poweredByHeader: false,
 };

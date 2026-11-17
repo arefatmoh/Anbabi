@@ -35,15 +35,6 @@ function MenuIcon({ open }: { open: boolean }) {
 function HeaderActions({ className, onNavigate }: { className?: string; onNavigate?: () => void }) {
   return (
     <div className={cn("header-actions", className)}>
-      <button
-        type="button"
-        disabled
-        title="Member sign-in is not connected yet"
-        aria-label="Log in (member sign-in is not available yet)"
-        className="header-action header-action-login"
-      >
-        Log in
-      </button>
       <a
         href={siteConfig.telegramUrl}
         target="_blank"

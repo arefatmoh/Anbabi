@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { BookDetailPage } from "@/components/books/book-detail-page";
 import { getBookDetailContent, getBookSlugs } from "@/lib/content/repository";
 import { siteConfig } from "@/lib/site";
+import { serializeJsonLd } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const slugs = await getBookSlugs();
@@ -53,7 +54,7 @@ export default async function BookPage({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(structuredData) }}
       />
       <BookDetailPage {...content} />
     </>

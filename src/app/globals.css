@@ -172,13 +172,6 @@ select {
   outline-offset: 4px;
 }
 
-.header-action-login {
-  border-color: rgb(17 17 17 / 30%);
-  background: transparent;
-  color: var(--color-ink);
-  cursor: not-allowed;
-}
-
 .header-action-member {
   background: var(--color-ink);
   color: var(--color-cream);

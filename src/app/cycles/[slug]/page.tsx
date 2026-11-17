@@ -26,6 +26,7 @@ export async function generateMetadata({
   return {
     title: cycle.title,
     description: cycle.shortDescription,
+    alternates: { canonical: `/cycles/${cycle.slug}` },
   };
 }
 

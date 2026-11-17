@@ -1,16 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 type ReactionType = "like" | "love";
-
-type ReactionState = {
-  selected?: ReactionType;
-  likes: number;
-  loves: number;
-};
 
 type ReactionBarProps = {
   contentId: string;
@@ -18,16 +12,6 @@ type ReactionBarProps = {
   compact?: boolean;
   className?: string;
 };
-
-function seededCount(seed: string, offset: number) {
-  let hash = offset;
-
-  for (const char of seed) {
-    hash = (hash * 31 + char.charCodeAt(0)) % 997;
-  }
-
-  return 12 + (hash % 38);
-}
 
 function LikeIcon({ className }: { className?: string }) {
   return (
@@ -74,57 +58,48 @@ export function ReactionBar({
   className,
 }: ReactionBarProps) {
   const storageKey = `read-revive:reaction:${contentId}`;
-  const initialState = useMemo<ReactionState>(
-    () => ({
-      likes: seededCount(contentId, 17),
-      loves: seededCount(contentId, 43),
-    }),
-    [contentId],
-  );
-  const [state, setState] = useState<ReactionState>(initialState);
+  const [selection, setSelection] = useState<{ key: string; type?: ReactionType }>();
+  const selected = selection?.key === storageKey ? selection.type : undefined;
   const [burst, setBurst] = useState<ReactionType | null>(null);
+  const burstTimer = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const timeout = window.setTimeout(() => {
-      const stored = window.localStorage.getItem(storageKey);
-
-      if (!stored) return;
-
       try {
-        const parsed = JSON.parse(stored) as ReactionState;
-        setState({ ...initialState, ...parsed });
+        const stored = window.localStorage.getItem(storageKey);
+        if (!stored) return;
+        const type: unknown = JSON.parse(stored)?.selected;
+        if (type === "like" || type === "love") {
+          setSelection({ key: storageKey, type });
+        }
       } catch {
-        window.localStorage.removeItem(storageKey);
+        // A blocked or invalid local store should not disable reactions.
       }
     }, 0);
 
     return () => window.clearTimeout(timeout);
-  }, [initialState, storageKey]);
+  }, [storageKey]);
+
+  useEffect(() => () => window.clearTimeout(burstTimer.current), []);
 
   function react(type: ReactionType) {
-    setState((current) => {
-      const wasSelected = current.selected === type;
-      const nextSelected = wasSelected ? undefined : type;
-      let likes = current.likes;
-      let loves = current.loves;
-
-      if (current.selected === "like") likes -= 1;
-      if (current.selected === "love") loves -= 1;
-      if (nextSelected === "like") likes += 1;
-      if (nextSelected === "love") loves += 1;
-
-      const next = { selected: nextSelected, likes, loves };
-      window.localStorage.setItem(storageKey, JSON.stringify(next));
-      return next;
-    });
+    const next = selected === type ? undefined : type;
+    setSelection({ key: storageKey, type: next });
+    try {
+      if (next) window.localStorage.setItem(storageKey, JSON.stringify({ selected: next }));
+      else window.localStorage.removeItem(storageKey);
+    } catch {
+      // Keep the current session interactive when local storage is unavailable.
+    }
 
     setBurst(type);
-    window.setTimeout(() => setBurst(null), 620);
+    window.clearTimeout(burstTimer.current);
+    burstTimer.current = window.setTimeout(() => setBurst(null), 620);
   }
 
   const reactions = [
-    { type: "like" as const, label: "Like", Icon: LikeIcon, count: state.likes },
-    { type: "love" as const, label: "Love", Icon: LoveIcon, count: state.loves },
+    { type: "like" as const, label: "Like", Icon: LikeIcon },
+    { type: "love" as const, label: "Love", Icon: LoveIcon },
   ];
 
   return (
@@ -143,7 +118,7 @@ export function ReactionBar({
       ) : null}
       <div className="flex flex-wrap items-center gap-3">
         {reactions.map((reaction) => {
-          const active = state.selected === reaction.type;
+          const active = selected === reaction.type;
           const Icon = reaction.Icon;
 
           return (
@@ -163,14 +138,6 @@ export function ReactionBar({
               )}
             >
               <Icon className="size-5" />
-              <span
-                className={cn(
-                  "rounded-full px-2 py-0.5 text-xs tabular-nums",
-                  active ? "bg-cream/70" : "bg-ink/8",
-                )}
-              >
-                {reaction.count}
-              </span>
               {burst === reaction.type ? (
                 <span className="reaction-confetti" aria-hidden="true">
                   <span />

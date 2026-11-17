@@ -8,6 +8,7 @@ import { getBooksContent } from "@/lib/content/repository";
 
 export const metadata: Metadata = {
   title: "Books",
+  alternates: { canonical: "/books" },
   description:
     "Explore books connected to Read & Revive reading cycles, reflections, and conversations.",
 };

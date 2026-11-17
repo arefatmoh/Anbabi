@@ -10,6 +10,7 @@ import {
   getVoices,
 } from "@/lib/content/repository";
 import { siteConfig } from "@/lib/site";
+import { serializeJsonLd } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const slugs = await getVoiceSlugs();
@@ -78,7 +79,7 @@ export default async function VoiceArticlePage({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(structuredData) }}
       />
       <ArticleDetailPage
         article={article}

@@ -95,7 +95,8 @@ export async function getHomeContent(): Promise<HomeContent> {
     currentCycle: mockCurrentCycle,
     featuredVoices: mockVoices.slice(0, 3),
     journey: readingJourney,
-    impactStats: homeImpactStats,
+    // Development figures have not been verified for public use.
+    impactStats: process.env.NODE_ENV === "development" ? homeImpactStats : [],
     programs: homePrograms,
   };
 }

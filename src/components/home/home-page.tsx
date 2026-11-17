@@ -62,9 +62,11 @@ export function HomePageContent({
         <Container className="mt-16 sm:mt-20">
           <ReadingValues />
         </Container>
-        <div className="mt-8 sm:mt-10">
-          <HomeImpactStats stats={impactStats} />
-        </div>
+          {impactStats.length > 0 && (
+            <div className="mt-8 sm:mt-10">
+              <HomeImpactStats stats={impactStats} />
+            </div>
+          )}
       </section>
 
       <Section className="relative overflow-hidden bg-cream">

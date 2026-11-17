@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 
+import { BookCoverImage } from "@/components/books/book-cover-image";
 import { ArrowIcon, LinkButton } from "@/components/ui/button";
 import type { MockBook } from "@/lib/content-types";
 import { assets } from "@/lib/assets";
@@ -195,7 +195,14 @@ export function BookShowcase({
                   <span className="book-showcase-cover-edge" />
                   <span className="book-showcase-front">
                     {book.coverImage ? (
-                      <Image src={book.coverImage.src} alt="" fill sizes="(max-width: 639px) 150px, 220px" className="object-contain" priority={book.slug === currentBook.slug} />
+                      <BookCoverImage
+                        src={book.coverImage.src}
+                        alt=""
+                        sizes="(max-width: 639px) 150px, 220px"
+                        className="object-contain"
+                        preload={book.slug === currentBook.slug}
+                        fallback={<span className="book-showcase-cover-fallback"><strong>{book.title}</strong><span>{book.author}</span></span>}
+                      />
                     ) : (
                       <span className="book-showcase-cover-fallback"><strong>{book.title}</strong><span>{book.author}</span></span>
                     )}
@@ -222,7 +229,7 @@ export function BookShowcase({
 
       <div className="book-showcase-caption" key={selectedBook.slug}>
         <div className="book-showcase-caption-cover" aria-hidden="true">
-          {selectedBook.coverImage ? <Image src={selectedBook.coverImage.src} alt="" fill sizes="(max-width: 639px) 80px, 120px" className="object-contain" loading="eager" /> : null}
+          {selectedBook.coverImage ? <BookCoverImage src={selectedBook.coverImage.src} alt="" sizes="(max-width: 639px) 80px, 120px" className="object-contain" /> : null}
         </div>
         <div className="book-showcase-caption-copy">
         <p className="book-showcase-category">{selectedBook.status === "current" ? "The book in the circle now" : selectedBook.category}</p>

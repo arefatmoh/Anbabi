@@ -5,6 +5,7 @@ import { getCurrentCycleContent, getVoices } from "@/lib/content/repository";
 
 export const metadata: Metadata = {
   title: "Voices from the Circle",
+  alternates: { canonical: "/voices" },
   description:
     "Read reflections, reader stories, and practical ideas shaped by books and conversation in the Read & Revive circle.",
 };
